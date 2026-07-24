@@ -1,14 +1,14 @@
-// class CartModel {
+class CartModel {
 
-//     id = "";
-//     customerId = "";
-//     productId = "";
-//     quantity = "";
-//     selectedSize = "";
-//     selectedColor = "";
-//     createdAt = "";
-//     updatedAt = "";
+    id = "";
+    customerId = "";
+    productId = "";
+    quantity = "";
+    selectedSize = "";
+    selectedColor = "";
+    createdAt = "";
+    updatedAt = "";
 
-// }
+}
 
-// export default CartModel;
+export default CartModel;

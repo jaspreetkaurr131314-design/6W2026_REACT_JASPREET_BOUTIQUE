@@ -6,6 +6,7 @@ import { FadeLoader, PacmanLoader } from "react-spinners";
 import Swal from "sweetalert2";
 import CategoryService from "../../../services/CategoryService";
 import ProductService from "../../../services/ProductService";
+import CartService from "../../../services/CartService";
 
 const override = {
     display: "block",
@@ -33,6 +34,41 @@ export default function BrowseProduct() {
         fetchProducts();
     }, [])
 
+
+    async function addToCart(product) {
+        // Get all cart items
+        const cartItems = await CartService.all();
+
+        // Check if product already exists in cart
+        const existingItem = cartItems.find(
+            (item) => item.productId === product.id
+        );
+
+        if (existingItem) {
+            const updatedData = {
+                quantity: existingItem.quantity + 1,
+                updatedAt: Date.now(),
+            };
+
+            await CartService.update(updatedData, existingItem.id);
+            toast.success("Cart quantity updated");
+        } else {
+            // Add new cart item
+            const payload = {
+                customerId: "",
+                productId: product.id,
+                quantity: 1,
+                selectedSize: "",
+                selectedColor: "",
+                createdAt: Date.now(),
+                updatedAt: Date.now(),
+            };
+
+            await CartService.add(payload);
+            toast.success("Added To Cart");
+        }
+    }
+
     return (
 
         <div className="site-section bg-light">
@@ -57,20 +93,27 @@ export default function BrowseProduct() {
                             data-aos="fade-up"
                             data-aos-delay={100}
                         >
-                            <a href="single.html">
+                            <Link to={`/product/${product.id}`}>
+
                                 <img src={product.image} alt="Image" className="img-fluid" />
-                            </a>
+                            </Link>
                             <div className="p-4 bg-white">
                                 <span className="d-block text-secondary small text-uppercase">
                                     {product.name}
                                 </span>
                                 <h2 className="h5 text-black mb-3">
-                                    <a className="text-decoration-line-through" href="single.html">{product.price}</a> &nbsp;
-                                    <a href="single.html">{product.discountPrice}</a>
+                                    <Link className="text-decoration-line-through" to={`/product/${product.id}`}>{product.price}</Link> &nbsp;
+                                    <Link to="single.html">{product.discountPrice}</Link>
                                 </h2>
                                 <h2 className="h5 text-black mb-3">
-                                    <a href="single.html">{product.description}</a>
+                                    <Link to={`/product/${product.id}`}>{product.description}</Link>
                                 </h2>
+                                <button
+                                    className="btn btn-primary"
+                                    onClick={() => addToCart(product)}
+                                >
+                                    Add To Cart
+                                </button>
                             </div>
                         </div>
                     ))

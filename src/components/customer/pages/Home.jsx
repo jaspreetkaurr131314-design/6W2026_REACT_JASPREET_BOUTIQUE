@@ -1,3 +1,6 @@
+import CartService from "../../../services/CartService";
+import { toast } from "react-toastify";
+
 import { useEffect, useState } from "react";
 import ProductService from "../../../services/ProductService";
 
@@ -16,6 +19,42 @@ export default function Home() {
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  async function addToCart(product) {
+    // Get all cart items
+    const cartItems = await CartService.all();
+
+    // Check if product already exists in cart
+    const existingItem = cartItems.find(
+      (item) => item.productId === product.id
+    );
+
+    if (existingItem) {
+      const updatedData = {
+        quantity: existingItem.quantity + 1,
+        updatedAt: Date.now(),
+      };
+
+      await CartService.update(updatedData, existingItem.id);
+      toast.success("Cart quantity updated");
+    } else {
+      // Add new cart item
+      const payload = {
+        customerId: "",
+        productId: product.id,
+        quantity: 1,
+        selectedSize: "",
+        selectedColor: "",
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+      };
+
+      await CartService.add(payload);
+      toast.success("Added To Cart");
+    }
+  }
+
+
   return (
     <>
       <>
@@ -120,10 +159,12 @@ export default function Home() {
                       <h6>₹ {item.price}</h6>
 
                       <button
-                        className="btn btn-primary w-100"
+                        className="btn btn-primary"
+                        onClick={() => addToCart(item)}
                       >
                         Add To Cart
                       </button>
+
 
                     </div>
 
@@ -135,71 +176,8 @@ export default function Home() {
 
             </div>
             <div className="row">
-              <div
-                className="col-md-6 col-lg-3"
-                data-aos="fade-up"
-                data-aos-delay={100}
-              >
-                <a href="#" className="unit-9">
-                  <div
-                    className="image"
-                    style={{ backgroundImage: 'url("images/img_1.jpg")' }}
-                  />
-                  <div className="unit-9-content">
-                    <h2>Nashville</h2>
-                    <span>$130/night</span>
-                    {/* <span>with Wendy Matos</span> */}
-                  </div>
-                </a>
-              </div>
-              <div
-                className="col-md-6 col-lg-3"
-                data-aos="fade-up"
-                data-aos-delay={200}
-              >
-                <a href="#" className="unit-9">
-                  <div
-                    className="image"
-                    style={{ backgroundImage: 'url("images/img_2.jpg")' }}
-                  />
-                  <div className="unit-9-content">
-                    <h2>Baltimore</h2>
-                    <span>$230/night</span>
-                  </div>
-                </a>
-              </div>
-              <div
-                className="col-md-6 col-lg-3"
-                data-aos="fade-up"
-                data-aos-delay={300}
-              >
-                <a href="#" className="unit-9">
-                  <div
-                    className="image"
-                    style={{ backgroundImage: 'url("images/img_3.jpg")' }}
-                  />
-                  <div className="unit-9-content">
-                    <h2>Austin</h2>
-                    <span>$130/night</span>
-                  </div>
-                </a>
-              </div>
-              <div
-                className="col-md-6 col-lg-3"
-                data-aos="fade-up"
-                data-aos-delay={400}
-              >
-                <a href="#" className="unit-9">
-                  <div
-                    className="image"
-                    style={{ backgroundImage: 'url("images/img_4.jpg")' }}
-                  />
-                  <div className="unit-9-content">
-                    <h2>Atlanta</h2>
-                    <span>$150/night</span>
-                  </div>
-                </a>
-              </div>
+
+
               <div className="col-md-12 text-center mt-5" data-aos="fade-up">
                 <a href="#" className="btn btn-primary">
                   Browse All Apartments

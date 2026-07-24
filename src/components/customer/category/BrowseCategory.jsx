@@ -60,15 +60,15 @@ export default function BrowseCategory() {
                         data-aos="fade-up"
                         data-aos-delay={100}
                     >
-                        <a href="single.html">
+                        <Link to="single.html">
                             <img src={category.image} alt="Image" className="img-fluid" />
-                        </a>
+                        </Link>
                         <div className="p-4 bg-white">
                             <span className="d-block text-secondary small text-uppercase">
                               { category.name}
                             </span>
                             <h2 className="h5 text-black mb-3">
-                                <a href="single.html">{category.description}</a>
+                                <Link to="single.html">{category.description}</Link>
                             </h2>
                         </div>
                     </div>

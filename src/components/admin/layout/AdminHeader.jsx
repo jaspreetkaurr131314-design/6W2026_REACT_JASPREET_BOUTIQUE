@@ -1,6 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import AuthService from "../../../services/AuthService";
+import { toast } from "react-toastify";
 
 export default function AdminHeader() {
+    const nav = useNavigate()
+    async function logout() {
+        await AuthService.logout()
+        toast.success("Logged Out");
+        nav('/')
+    }
+
     return (
         <>
             <div className="site-navbar mt-4">
@@ -10,7 +19,7 @@ export default function AdminHeader() {
                             <h1 className="mb-0">
                                 <a href="index.html" className="text-white h2 mb-0">
                                     <strong>
-                                        Apart<span className="text-primary">.</span>
+                                        Admin panel<span className="text-primary">.</span>
                                     </strong>
                                 </a>
                             </h1>
@@ -37,15 +46,11 @@ export default function AdminHeader() {
                                         <Link to="/admin/product">Product</Link>
                                     </li>
                                     <li>
-
                                         <Link to="/admin/orders">Order</Link>
                                     </li>
-                                    {/* <li>
-                                        <Link to="/admin/Cart">Cart</Link>
-                                    </li> */}
 
                                     <li>
-                                        <Link to="">Logout</Link>
+                                        <Link to="" onClick={logout}>Logout</Link>
                                     </li>
                                 </ul>
                             </nav>

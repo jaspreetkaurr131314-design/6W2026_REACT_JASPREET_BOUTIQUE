@@ -1,15 +1,25 @@
-class OrderModel {
+export default class OrderModel {
 
     id = "";
     customerId = "";
+    name = "";
+    phone = "";
+
+    houseNo = "";
+    street = "";
+    nearPlace = "";
+    city = "";
+    state = "";
+    pincode = "";
+
     totalAmount = "";
-    shippingAddress = "";
+
     paymentMethod = "";
     paymentStatus = "Pending";
+
     orderStatus = "Pending";
+
     createdAt = "";
     updatedAt = "";
 
 }
-
-export default OrderModel;

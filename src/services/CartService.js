@@ -1,102 +1,93 @@
-// import { addDoc, collection, getDocs, getDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
-// import { db } from "../firebase/FirebaseConfig";
-// import CartModel from "../model/CartModel";
+import { addDoc, collection, getDocs, getDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
+import { db } from "../firebase/FirebaseConfig";
+import CartModel from "../model/CartModel";
 
-// class CartService {
+class CartService {
 
-//     // Add Cart
-//     async add(data) {
+    // Add Cart
+    async add(data) {
 
-//         let newCart = new CartModel();
+        let newCart = new CartModel();
 
-//         newCart.name = data.name;
-//         newCart.customerId = data.customerId;
-//         newCart.productId = data.productId;
-//         newCart.quantity = data.quantity;
-//         newCart.selectedSize = data.selectedSize;
-//         newCart.selectedColor = data.selectedColor;
-//         // newCart.status = data.status;
-//         // newCart.image = data.image;
-//         newCart.createdAt = data.createdAt;
-//         newCart.updatedAt = data.updatedAt;
+        // newCart.name = data.name;
+        newCart.customerId = data.customerId;
+        newCart.productId = data.productId;
+        newCart.quantity = data.quantity;
+        newCart.selectedSize = data.selectedSize;
+        newCart.selectedColor = data.selectedColor;
+        // newCart.status = data.status;
+        // newCart.image = data.image;
+        newCart.createdAt = data.createdAt;
+        newCart.updatedAt = data.updatedAt;
 
-//         console.log("new", newCart)
+        console.log("new", newCart)
 
-//         try {
+        try {
 
-//             const docRef = await addDoc(
-//                 collection(db, "cart"),
-//                 { ...newCart }
-//             );
+            const docRef = await addDoc(
+                collection(db, "cart"),
+                { ...newCart }
+            );
 
-//             return docRef;
-//         } catch (err) {
-//             console.log(err.message);
+            return docRef;
+        } catch (err) {
+            console.log(err.message);
 
-//         }
+        }
+    }
 
+    // Get All Cart
+    async all() {
 
-//     }
+        let data = [];
 
-//     // Get All Cart
-//     async all() {
+        const querySnapshot = await getDocs(collection(db, "cart"));
 
+        querySnapshot.forEach((doc) => {
+            // console.log(doc.id);
 
-//         let data = [];
+            data.push({
+                ...doc.data(),
+                id: doc.id
+            });
 
-//         const querySnapshot = await getDocs(collection(db, "cart"));
+        });
 
-//         querySnapshot.forEach((doc) => {
-//             console.log(doc.id);
+        return data;
+    }
+    async deleteCat(id) {
+        await deleteDoc(doc(db, "cart", id));
 
-//             data.push({
-//                 ...doc.data(),
-//                 id: doc.id
-//             });
+    }
 
-//         });
+    // Update Cart
+    async update(data, id) {
+        const docRef = doc(db, "cart", id);
+        await updateDoc(docRef, data);
 
-//         return data;
-//     }
-//     async deleteCat(id) {
-//         await deleteDoc(doc(db, "cart", id));
+    }
 
-//     }
+    // Get Cart By ID
+    async single(id) {
 
-// // Update Cart
-//     async update(data, id) {
+        const docRef = doc(
+            db,
+            "cart",
+            id
+        );
 
-//         await updateDoc(doc(db, "cart", id), {
-//             name: data.name,
-//             // description: data.description,
-//             productId: data.productId,
-//             customerId: data.customerId,
-//             quantity:data.quantity,
-//             selectedSize:data.selectedSize,
-//             selectedColor:data.selectedColor,
-//             // image: data.image,
-//             status: data.status,
-//             updatedAt: new Date()
-//         });
+        // const docRef = doc(db, "cart", id);
+        const docSnap = await getDoc(docRef);
 
+        if (docSnap.exists()) {
+            return {
+                id: docSnap.id,
+                ...docSnap.data()
+            };
+        } else {
+            return null;
+        }
+    }
+}
 
-
-//     }
-//     // Get Cart By ID
-//     async single(id) {
-
-//         const docRef = doc(db, "cart", id);
-//         const docSnap = await getDoc(docRef);
-
-//         if (docSnap.exists()) {
-//             return {
-//                 id: docSnap.id,
-//                 ...docSnap.data()
-//             };
-//         } else {
-//             return null;
-//         }
-//     }
-// }
-
-// export default new CartService();
+export default new CartService();

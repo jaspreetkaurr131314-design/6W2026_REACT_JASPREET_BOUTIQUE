@@ -8,12 +8,15 @@ import Cart from "./components/customer/pages/Cart";
 import Checkout from "./components/customer/pages/Checkout";
 import BrowseCategory from "./components/customer/category/BrowseCategory";
 import BrowseProduct from "./components/customer/product/BrowseProduct";
+import ProductDetail from "./components/customer/product/ProductDetail";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
 
-// import Login from './components/customer/login/Login'
 
 import AdminLayout from './components/admin/layout/AdminLayout'
 import About from "./components/customer/pages/About"
 import Dashboard from "./components/admin/pages/Dashboard"
+import Orders from "./components/admin/pages/Orders";
 // category
 
 import ManageCategory from "./components/admin/category/ManageCategory"
@@ -43,7 +46,10 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/category" element={<BrowseCategory />} />
             <Route path="/product" element={<BrowseProduct />} />
-            {/* <Route path='/login' element={<Login/>}></Route> */}
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/login" element={<Login />} />
+
+            <Route path="/register" element={<Register />} />
           </Route>
 
           {/* admin */}
@@ -51,8 +57,9 @@ function App() {
             <Route path='' element={<Dashboard />}></Route>
             <Route path='categories' element={<ManageCategory />}></Route>
             <Route path='category/add' element={<AddCategory />}></Route>
-            <Route path='category/edit/:id' element={<EditCategory />}></Route>
-
+            <Route path='category/edit/:id' element={<EditCategory />}>
+            </Route>
+            <Route path='orders' element={<Orders />} />
 
             {/* Product */}
             <Route path="product" element={<ManageProduct />} />

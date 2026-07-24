@@ -1,16 +1,45 @@
-import AdminFooter from "./AdminFooter";
+import { Outlet, useNavigate } from "react-router-dom";
 import AdminHeader from "./AdminHeader";
+import AdminFooter from "./AdminFooter";
+import AuthService from "../../../services/AuthService";
+import { useEffect } from "react";
+import { toast } from "react-toastify";
 
-import { Outlet } from 'react-router-dom'
+// Layout wrapper for admin pages
+export default function AdminLayout() {
 
-export default function Layout() {
+    const nav = useNavigate()
+
+    function getUserType(){
+        const res = AuthService.getUserType()
+        return res;
+    }
+    function getUserEmail(){
+        const res = AuthService.getEmail()
+        return res;
+    }
+
+    useEffect(()=>{
+        const email = getUserEmail()
+        const userType = getUserType()
+        if(userType !== '1' || email == null){
+            toast.error("Unauthorised")
+            nav('/')
+        }
+
+    }, [])
+
+
     return (
         <>
-            <AdminHeader></AdminHeader>
+            {/* Shows the top admin header */}
+            <AdminHeader />
+            {/* Displays the actual admin page content (Dashboard, etc.) */}
+            <Outlet />
+            {/* Shows the bottom admin footer */}
+            <AdminFooter />
 
-            <Outlet></Outlet>
 
-            <AdminFooter></AdminFooter>
         </>
     )
 }

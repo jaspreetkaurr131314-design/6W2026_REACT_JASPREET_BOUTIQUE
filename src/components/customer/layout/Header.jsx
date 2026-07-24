@@ -1,6 +1,31 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import AuthService from "../../../services/AuthService";
+import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 export default function Header() {
+
+    const [email, setEmail] = useState('')
+    const nav = useNavigate()
+
+    function getEmail() {
+        const res = AuthService.getEmail()
+        setEmail(res)
+        console.log("Res: ", res);
+
+
+    }
+
+    async function logout() {
+        await AuthService.logout()
+        toast.success("Logged Out");
+        nav('/')
+    }
+
+
+    useEffect(() => {
+        getEmail()
+    })
     return (
         <>
             <div className="site-navbar mt-4">
@@ -32,41 +57,32 @@ export default function Header() {
                                     <li>
                                         <Link to="/about">About</Link>
                                     </li>
-{/* 
                                     <li>
-                                        <Link to="/cart">Cart</Link>
-                                    </li> */}
+                                        <Link to="/product">Product</Link>
+                                    </li>
+
                                     <li className="has-children">
                                         <Link to="/Cart ">Cart</Link>
-                                        <ul className="dropdown arrow-top">
-                                            <li>
-                                                <Link to="/checkout">Checkout</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="#">Rooms</Link>
-                                            </li>
-                                            <li>
-                                                <Link to="#">Suites</Link>
-                                            </li>
-                                            <li className="has-children">
-                                                <Link to="#">Sub Menu</Link>
-                                                <ul className="dropdown">
-                                                    <li>
-                                                        <Link to="#">Menu One</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="#">Menu Two</Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link to="#">Menu Three</Link>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li> 
- <li>
+
+                                    </li>
+                                    <li>
                                         <Link to="/category">Category</Link>
                                     </li>
+
+                                    {email ?
+                                        <li>
+                                            <Link to="/" onClick={logout}>Logout</Link>
+                                        </li>
+                                        :
+                                        <>
+                                            <li>
+                                                <Link to="/login">Login</Link>
+                                            </li>
+                                            <li>
+                                                <Link to="/register">Register</Link>
+                                            </li>
+                                        </>
+                                    }
                                     <li>
                                         <Link to="/contact">Contact</Link>
                                     </li>

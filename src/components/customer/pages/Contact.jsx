@@ -26,7 +26,9 @@ export default function Contact() {
                                 data-aos-delay={400}
                             >
                                 <h1 className="text-white">Contact Us</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <p>Have questions about our products or orders?
+                                    We are happy to help you.
+                                </p>
                             </div>
                         </div>
                     </div>
