@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Footer() {
     return (
         <>
@@ -46,32 +48,32 @@ export default function Footer() {
                                 <div className="col-md-6 col-lg-6">
                                     <ul className="list-unstyled">
                                         <li>
-                                            <a href="#">Home</a>
+                                            <Link to="#">Home</Link>
                                         </li>
                                         <li>
-                                            <a href="#">Apartments</a>
+                                            <Link to="#">Apartments</Link>
                                         </li>
                                         <li>
-                                            <a href="#">News</a>
+                                            <Link to="#">News</Link>
                                         </li>
                                         <li>
-                                            <a href="#">Featured Apartment</a>
+                                            <Link to="#">Featured Apartment</Link>
                                         </li>
                                     </ul>
                                 </div>
                                 <div className="col-md-6 col-lg-6">
                                     <ul className="list-unstyled">
                                         <li>
-                                            <a href="#">About Us</a>
+                                            <Link to="#">About Us</Link>
                                         </li>
                                         <li>
-                                            <a href="#">Privacy Policy</a>
+                                            <Link to="#">Privacy Policy</Link>
                                         </li>
                                         <li>
-                                            <a href="#">Contact Us</a>
+                                            <Link to="#">Contact Us</Link>
                                         </li>
                                         <li>
-                                            <a href="#">Membership</a>
+                                            <Link to="#">Membership</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -80,18 +82,18 @@ export default function Footer() {
                                 <div className="col-md-12">
                                     <h3 className="footer-heading mb-4">Follow Us</h3>
                                     <div>
-                                        <a href="#" className="pl-0 pr-3">
+                                        <Link to="#" className="pl-0 pr-3">
                                             <span className="icon-facebook" />
-                                        </a>
-                                        <a href="#" className="pl-3 pr-3">
+                                        </Link>
+                                        <Link to="#" className="pl-3 pr-3">
                                             <span className="icon-twitter" />
-                                        </a>
-                                        <a href="#" className="pl-3 pr-3">
+                                        </Link>
+                                        <Link to="#" className="pl-3 pr-3">
                                             <span className="icon-instagram" />
-                                        </a>
-                                        <a href="#" className="pl-3 pr-3">
+                                        </Link>
+                                        <Link to="#" className="pl-3 pr-3">
                                             <span className="icon-linkedin" />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -106,12 +108,12 @@ export default function Footer() {
                                             alt="Image placeholder"
                                             className="img-fluid rounded"
                                         />
-                                        <a
-                                            href="https://vimeo.com/channels/staffpicks/93951774"
+                                        <Link
+                                            to="https://vimeo.com/channels/staffpicks/93951774"
                                             className="play-button popup-vimeo"
                                         >
                                             <span className="icon-play" />
-                                        </a>
+                                        </Link>
                                     </figure>
                                 </div>
                             </div>
@@ -123,9 +125,9 @@ export default function Footer() {
                                 {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
                                 Copyright © All rights reserved | This template is made with{" "}
                                 <i className="icon-heart text-danger" aria-hidden="true" /> by{" "}
-                                <a href="https://colorlib.com" target="_blank">
+                                <Link to="https://colorlib.com" target="_blank">
                                     Colorlib
-                                </a>
+                                </Link>
                                 {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
                             </p>
                         </div>

@@ -247,18 +247,6 @@ export default function Orders() {
                                                 Delete
                                             </button>
 
-                                            {/* <button
-                                                className="btn btn-danger"
-                                                onClick={() => {
-                                                    console.log("DELETE ID:", order.id);
-                                                    deleteOrder(order.id);
-                                                }}
-                                            >
-                                                Delete
-                                            </button> */}
-
-
-
                                         </td>
 
                                     </tr>

@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom"
 export default function Contact() {
     return (
         <>
@@ -113,11 +115,11 @@ export default function Contact() {
                                     </p>
                                     <p className="mb-0 font-weight-bold text-black">Phone</p>
                                     <p className="mb-4">
-                                        <a href="#">+1 232 3235 324</a>
+                                        <Link to="#">+1 232 3235 324</Link>
                                     </p>
                                     <p className="mb-0 font-weight-bold text-black">Email Address</p>
                                     <p className="mb-0">
-                                        <a href="#">youremail@domain.com</a>
+                                        <Link to="#">youremail@domain.com</Link>
                                     </p>
                                 </div>
                                 <div className="p-4 mb-3 bg-white">
@@ -128,9 +130,9 @@ export default function Contact() {
                                         perferendis dolore, ipsa consectetur
                                     </p>
                                     <p>
-                                        <a href="#" className="btn btn-primary  py-2 px-4">
+                                        <Link to="#" className="btn btn-primary  py-2 px-4">
                                             Learn More
-                                        </a>
+                                        </Link>
                                     </p>
                                 </div>
                             </div>
@@ -271,24 +273,24 @@ export default function Contact() {
                 <div className="bg-primary" data-aos="fade">
                     <div className="container">
                         <div className="row">
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block">
+                            <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                                 <span className="icon-facebook text-white" />
-                            </a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block">
+                            </Link>
+                            <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                                 <span className="icon-twitter text-white" />
-                            </a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block">
+                            </Link>
+                            <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                                 <span className="icon-instagram text-white" />
-                            </a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block">
+                            </Link>
+                            <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                                 <span className="icon-linkedin text-white" />
-                            </a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block">
+                            </Link>
+                            <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                                 <span className="icon-pinterest text-white" />
-                            </a>
-                            <a href="#" className="col-2 text-center py-4 social-icon d-block">
+                            </Link>
+                            <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                                 <span className="icon-youtube text-white" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

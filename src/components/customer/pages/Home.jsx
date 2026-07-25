@@ -1,6 +1,6 @@
 import CartService from "../../../services/CartService";
 import { toast } from "react-toastify";
-
+import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import ProductService from "../../../services/ProductService";
 
@@ -69,7 +69,7 @@ export default function Home() {
         {/* .site-mobile-menu */}
         <div
           className="site-blocks-cover overlay"
-          style={{ backgroundImage: 'url("images/hero_bg_2.jpg")' }}
+          style={{ backgroundImage: 'url("public/background.jpg")' }}
           data-aos="fade"
           data-stellar-background-ratio="0.5"
         >
@@ -80,14 +80,14 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay={400}
               >
-                <h1 className="mb-4">Excellent Space For Your Next Home</h1>
+                <h1 className="mb-4">Discover Your Perfect Style</h1>
                 <p className="mb-5">
-                  1105 Madison Plaza Suite 120 Chesapeake, CA, California
+                  Welcome to Jaspreet Boutique, your one-stop destination for stylish and fashionable clothing. Explore our latest collection of trendy outfits, quality products, and beautiful designs made for every occasion.
                 </p>
                 <p>
-                  <a href="#" className="btn btn-primary px-5 py-3">
-                    Take a Tour
-                  </a>
+                  <Link to="#" className="btn btn-primary px-5 py-3">
+                    Shop Now
+                  </Link>
                 </p>
               </div>
             </div>
@@ -97,7 +97,7 @@ export default function Home() {
           <div className="featured-property-half d-flex">
             <div
               className="image"
-              style={{ backgroundImage: 'url("images/hero_bg_1.jpg")' }}
+              style={{ backgroundImage: 'url("public/images/js.jpg")' }}
             />
             <div className="text">
               <h2>Property Information</h2>
@@ -126,9 +126,9 @@ export default function Home() {
                 </li>
               </ul>
               <p>
-                <a href="#" className="btn btn-primary px-4 py-3">
+                <Link to="#" className="btn btn-primary px-4 py-3">
                   Get Details
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -179,9 +179,9 @@ export default function Home() {
 
 
               <div className="col-md-12 text-center mt-5" data-aos="fade-up">
-                <a href="#" className="btn btn-primary">
+                <Link to="#" className="btn btn-primary">
                   Browse All Apartments
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -202,8 +202,8 @@ export default function Home() {
               </div>
             </div>
             <div className="site-block-retro d-block d-md-flex">
-              <a
-                href="#"
+              <Link
+                to="#"
                 className="col1 unit-9 no-height"
                 data-aos="fade-up"
                 data-aos-delay={100}
@@ -216,10 +216,10 @@ export default function Home() {
                   <h2>Baltimore Apartment</h2>
                   <span>$600/night</span>
                 </div>
-              </a>
+              </Link>
               <div className="col2 ml-auto">
-                <a
-                  href="#"
+                <Link
+                  to="#"
                   className="col2-row1 unit-9 no-height"
                   data-aos="fade-up"
                   data-aos-delay={200}
@@ -232,9 +232,9 @@ export default function Home() {
                     <h2>Austin Apartment</h2>
                     <span>$290/night</span>
                   </div>
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  to="#"
                   className="col2-row2 unit-9 no-height"
                   data-aos="fade-up"
                   data-aos-delay={300}
@@ -247,7 +247,7 @@ export default function Home() {
                     <h2>Atlanta Apartment</h2>
                     <span>$1,290/night</span>
                   </div>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -385,15 +385,15 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
-                <a href="single.html">
+                <Link to="single.html">
                   <img src="images/img_4.jpg" alt="Image" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
                     Jan 20th, 2019
                   </span>
                   <h2 className="h5 text-black mb-3">
-                    <a href="single.html">Fugit nam obcaecati fuga itaque</a>
+                    <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
                   </h2>
                 </div>
               </div>
@@ -402,15 +402,15 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                <a href="single.html">
+                <Link to="single.html">
                   <img src="images/img_2.jpg" alt="Image" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
                     Jan 20th, 2019
                   </span>
                   <h2 className="h5 text-black mb-3">
-                    <a href="single.html">Fugit nam obcaecati fuga itaque</a>
+                    <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
                   </h2>
                 </div>
               </div>
@@ -419,15 +419,15 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay={300}
               >
-                <a href="single.html">
+                <Link to="single.html">
                   <img src="images/img_3.jpg" alt="Image" className="img-fluid" />
-                </a>
+                </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
                     Jan 20th, 2019
                   </span>
                   <h2 className="h5 text-black mb-3">
-                    <a href="single.html">Fugit nam obcaecati fuga itaque</a>
+                    <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
                   </h2>
                 </div>
               </div>
@@ -437,24 +437,24 @@ export default function Home() {
         <div className="bg-primary" data-aos="fade">
           <div className="container">
             <div className="row">
-              <a href="#" className="col-2 text-center py-4 social-icon d-block">
+              <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                 <span className="icon-facebook text-white" />
-              </a>
-              <a href="#" className="col-2 text-center py-4 social-icon d-block">
+              </Link>
+              <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                 <span className="icon-twitter text-white" />
-              </a>
-              <a href="#" className="col-2 text-center py-4 social-icon d-block">
+              </Link>
+              <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                 <span className="icon-instagram text-white" />
-              </a>
-              <a href="#" className="col-2 text-center py-4 social-icon d-block">
+              </Link>
+              <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                 <span className="icon-linkedin text-white" />
-              </a>
-              <a href="#" className="col-2 text-center py-4 social-icon d-block">
+              </Link>
+              <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                 <span className="icon-pinterest text-white" />
-              </a>
-              <a href="#" className="col-2 text-center py-4 social-icon d-block">
+              </Link>
+              <Link to="#" className="col-2 text-center py-4 social-icon d-block">
                 <span className="icon-youtube text-white" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

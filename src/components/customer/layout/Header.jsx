@@ -58,16 +58,16 @@ export default function Header() {
                                         <Link to="/about">About</Link>
                                     </li>
                                     <li>
+                                        <Link to="/category">Category</Link>
+                                    </li>
+                                    <li>
                                         <Link to="/product">Product</Link>
                                     </li>
 
-                                    <li className="has-children">
-                                        <Link to="/Cart ">Cart</Link>
-
-                                    </li>
                                     <li>
-                                        <Link to="/category">Category</Link>
+                                        <Link to="/cart">Cart</Link>
                                     </li>
+                                    
 
                                     {email ?
                                         <li>

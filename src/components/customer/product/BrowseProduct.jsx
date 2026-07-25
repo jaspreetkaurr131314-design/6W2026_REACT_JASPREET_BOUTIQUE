@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { FadeLoader, PacmanLoader } from "react-spinners";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../../../firebase/FirebaseConfig";
 import Swal from "sweetalert2";
 import CategoryService from "../../../services/CategoryService";
 import ProductService from "../../../services/ProductService";
@@ -67,6 +69,26 @@ export default function BrowseProduct() {
             await CartService.add(payload);
             toast.success("Added To Cart");
         }
+    }
+    const navigate = useNavigate();
+
+    function addToCart(product) {
+
+        if (!auth.currentUser) {
+
+            toast.warning("Please Register/Login first!");
+
+            navigate("/login");
+
+            return;
+
+        }
+
+        // hun user login aa
+        console.log("Product Added To Cart", product);
+
+        toast.success("Product Added To Cart!");
+
     }
 
     return (

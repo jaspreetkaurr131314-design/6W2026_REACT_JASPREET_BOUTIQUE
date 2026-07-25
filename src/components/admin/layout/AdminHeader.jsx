@@ -17,11 +17,11 @@ export default function AdminHeader() {
                     <div className="row align-items-center">
                         <div className="col-8 col-md-8 col-lg-4">
                             <h1 className="mb-0">
-                                <a href="index.html" className="text-white h2 mb-0">
+                                <Link to="index.html" className="text-white h2 mb-0">
                                     <strong>
                                         Admin panel<span className="text-primary">.</span>
                                     </strong>
-                                </a>
+                                </Link>
                             </h1>
                         </div>
                         <div className="col-4 col-md-4 col-lg-8">
@@ -30,9 +30,9 @@ export default function AdminHeader() {
                                 role="navigation"
                             >
                                 <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
-                                    <a href="#" className="site-menu-toggle js-menu-toggle text-white">
+                                    <Link to="#" className="site-menu-toggle js-menu-toggle text-white">
                                         <span className="icon-menu h3" />
-                                    </a>
+                                    </Link>
                                 </div>
                                 <ul className="site-menu js-clone-nav d-none d-lg-block">
                                     <li className="active">

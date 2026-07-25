@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function About(){
     return(
         <>
@@ -76,15 +78,15 @@ export default function About(){
                 reprehenderit nemo.
               </p>
               <p>
-                <a href="#" className="text-white p-2">
+                <Link to="#" className="text-white p-2">
                   <span className="icon-facebook" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-twitter" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-linkedin" />
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -102,15 +104,15 @@ export default function About(){
                 reprehenderit nemo.
               </p>
               <p>
-                <a href="#" className="text-white p-2">
+                <Link to="#" className="text-white p-2">
                   <span className="icon-facebook" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-twitter" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-linkedin" />
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -128,15 +130,15 @@ export default function About(){
                 reprehenderit nemo.
               </p>
               <p>
-                <a href="#" className="text-white p-2">
+                <Link to="#" className="text-white p-2">
                   <span className="icon-facebook" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-twitter" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-linkedin" />
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -154,15 +156,15 @@ export default function About(){
                 reprehenderit nemo.
               </p>
               <p>
-                <a href="#" className="text-white p-2">
+                <Link to="#" className="text-white p-2">
                   <span className="icon-facebook" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-twitter" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-linkedin" />
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -180,15 +182,15 @@ export default function About(){
                 reprehenderit nemo.
               </p>
               <p>
-                <a href="#" className="text-white p-2">
+                <Link to="#" className="text-white p-2">
                   <span className="icon-facebook" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-twitter" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-linkedin" />
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -206,15 +208,15 @@ export default function About(){
                 reprehenderit nemo.
               </p>
               <p>
-                <a href="#" className="text-white p-2">
+                <Link to="#" className="text-white p-2">
                   <span className="icon-facebook" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-twitter" />
-                </a>
-                <a href="#" className="text-white p-2">
+                </Link>
+                <Link to="#" className="text-white p-2">
                   <span className="icon-linkedin" />
-                </a>
+                </Link>
               </p>
             </div>
           </div>
@@ -238,8 +240,8 @@ export default function About(){
         </div>
       </div>
       <div className="site-block-retro d-block d-md-flex">
-        <a
-          href="#"
+        <Link
+          to="#"
           className="col1 unit-9 no-height"
           data-aos="fade-up"
           data-aos-delay={100}
@@ -252,10 +254,10 @@ export default function About(){
             <h2>Baltimore Apartment</h2>
             <span>$600/night</span>
           </div>
-        </a>
+        </Link>
         <div className="col2 ml-auto">
-          <a
-            href="#"
+          <Link
+            to="#"
             className="col2-row1 unit-9 no-height"
             data-aos="fade-up"
             data-aos-delay={200}
@@ -268,9 +270,9 @@ export default function About(){
               <h2>Austin Apartment</h2>
               <span>$290/night</span>
             </div>
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#"
             className="col2-row2 unit-9 no-height"
             data-aos="fade-up"
             data-aos-delay={300}
@@ -283,7 +285,7 @@ export default function About(){
               <h2>Atlanta Apartment</h2>
               <span>$1,290/night</span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -403,24 +405,24 @@ export default function About(){
   <div className="bg-primary" data-aos="fade">
     <div className="container">
       <div className="row">
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-facebook text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-twitter text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-instagram text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-linkedin text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-pinterest text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-youtube text-white" />
-        </a>
+        </Link>
       </div>
     </div>
   </div>

@@ -83,33 +83,7 @@ class OrderService {
 
         return data;
     }
-    // async all() {
-
-    //     let data = [];
-
-    //     const querySnapshot = await getDocs(
-
-    //         collection(db, "orders")
-
-    //     );
-
-
-    //     querySnapshot.forEach((docsnap) => {
-
-    //         data.push({
-
-    //             id: docsnap.id,
-
-    //             ...docsnap.data()
-
-    //         });
-
-    //     });
-
-
-    //     return data;
-
-    // }
+   
 
 
     // Delete Order

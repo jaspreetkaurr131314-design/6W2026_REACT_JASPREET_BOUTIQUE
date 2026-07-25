@@ -12,74 +12,100 @@ export default function Checkout() {
     const [paymentMethod, setPaymentMethod] = useState("");
     const [phone, setPhone] = useState("");
 
-   async function placeOrder(e) {
+    async function placeOrder(e) {
 
-    e.preventDefault();
+        e.preventDefault();
 
+        let orderData = {
 
-    let orderData = {
+            customerId: "",
 
-        customerId: "",
+            name: name,
+            phone: phone,
+            houseNo: houseNo,
+            street: street,
+            nearPlace: nearPlace,
+            city: city,
+            state: state,
+            pincode: pincode,
 
-        name: name,
+            totalAmount: 100,
 
-        phone: phone,
+            paymentMethod: paymentMethod
 
-        houseNo: houseNo,
+        };
 
-        street: street,
+        try {
 
-        nearPlace: nearPlace,
+            if (paymentMethod === "Online") {
 
-        city: city,
+                openRazorpay(orderData);
 
-        state: state,
+            } else {
 
-        pincode: pincode,
+                await OrderService.add(orderData);
 
-        totalAmount: 0,
+                alert("Order Placed Successfully 🎉");
 
-        paymentMethod: paymentMethod
+            }
 
-    };
+        } catch (err) {
 
+            console.log(err);
 
-    try {
+            alert("Order Failed");
 
-        await OrderService.add(orderData);
-
-
-        alert("Order Placed Successfully 🎉");
-
-
-        setName("");
-
-        setPhone("");
-
-        setHouseNo("");
-
-        setStreet("");
-
-        setNearPlace("");
-
-        setCity("");
-
-        setState("");
-
-        setPincode("");
-
-        setPaymentMethod("");
-
-
-    } catch (err) {
-
-        console.log(err);
-
-        alert("Order Failed");
+        }
 
     }
+    
+     async function openRazorpay(orderData) {
+        const options = {
 
-}
+            key: "rzp_test_THdvTEQPCamtpB",
+
+            amount: 10000, // ₹100 = 10000 paise
+
+            currency: "INR",
+
+            name: "Jaspreet Boutique",
+
+            description: "Order Payment",
+
+            handler: async function (response) {
+
+
+
+                await OrderService.add({
+
+                    ...orderData,
+
+                    paymentMethod: "Razorpay",
+
+                    paymentStatus: "Paid",
+
+                    paymentId: response.razorpay_payment_id
+
+                });
+
+                alert("Payment Successful 🎉");
+
+            },
+            prefill: {
+
+                name: name,
+
+                contact: phone
+
+            }
+
+        };
+
+        const razorpay = new window.Razorpay(options);
+
+        razorpay.open();
+
+    }
 
     return (
         <>
@@ -142,7 +168,7 @@ export default function Checkout() {
                                     <div className="col-md-6 mb-3 mb-md-0">
 
                                         <label className="font-weight-bold">
-                                             Name
+                                            Name
                                         </label>
 
                                         <input

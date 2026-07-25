@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Dashboard(){
     return(
         <>
@@ -29,9 +31,9 @@ export default function Dashboard(){
             1105 Madison Plaza Suite 120 Chesapeake, CA, California
           </p>
           <p>
-            <a href="#" className="btn btn-primary px-5 py-3">
+            <Link to="#" className="btn btn-primary px-5 py-3">
               Take a Tour
-            </a>
+            </Link>
           </p>
         </div>
       </div>
@@ -70,9 +72,9 @@ export default function Dashboard(){
           </li>
         </ul>
         <p>
-          <a href="#" className="btn btn-primary px-4 py-3">
+          <Link to="#" className="btn btn-primary px-4 py-3">
             Get Details
-          </a>
+          </Link>
         </p>
       </div>
     </div>
@@ -95,7 +97,7 @@ export default function Dashboard(){
           data-aos="fade-up"
           data-aos-delay={100}
         >
-          <a href="#" className="unit-9">
+          <Link to="#" className="unit-9">
             <div
               className="image"
               style={{ backgroundImage: 'url("images/img_1.jpg")' }}
@@ -105,14 +107,14 @@ export default function Dashboard(){
               <span>$130/night</span>
               {/* <span>with Wendy Matos</span> */}
             </div>
-          </a>
+          </Link>
         </div>
         <div
           className="col-md-6 col-lg-3"
           data-aos="fade-up"
           data-aos-delay={200}
         >
-          <a href="#" className="unit-9">
+          <Link to="#" className="unit-9">
             <div
               className="image"
               style={{ backgroundImage: 'url("images/img_2.jpg")' }}
@@ -121,14 +123,14 @@ export default function Dashboard(){
               <h2>Baltimore</h2>
               <span>$230/night</span>
             </div>
-          </a>
+          </Link>
         </div>
         <div
           className="col-md-6 col-lg-3"
           data-aos="fade-up"
           data-aos-delay={300}
         >
-          <a href="#" className="unit-9">
+          <Link to="#" className="unit-9">
             <div
               className="image"
               style={{ backgroundImage: 'url("images/img_3.jpg")' }}
@@ -137,14 +139,14 @@ export default function Dashboard(){
               <h2>Austin</h2>
               <span>$130/night</span>
             </div>
-          </a>
+          </Link>
         </div>
         <div
           className="col-md-6 col-lg-3"
           data-aos="fade-up"
           data-aos-delay={400}
         >
-          <a href="#" className="unit-9">
+          <Link to="#" className="unit-9">
             <div
               className="image"
               style={{ backgroundImage: 'url("images/img_4.jpg")' }}
@@ -153,12 +155,12 @@ export default function Dashboard(){
               <h2>Atlanta</h2>
               <span>$150/night</span>
             </div>
-          </a>
+          </Link>
         </div>
         <div className="col-md-12 text-center mt-5" data-aos="fade-up">
-          <a href="#" className="btn btn-primary">
+          <Link to="#" className="btn btn-primary">
             Browse All Apartments
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -179,8 +181,8 @@ export default function Dashboard(){
         </div>
       </div>
       <div className="site-block-retro d-block d-md-flex">
-        <a
-          href="#"
+        <Link
+          to="#"
           className="col1 unit-9 no-height"
           data-aos="fade-up"
           data-aos-delay={100}
@@ -193,10 +195,10 @@ export default function Dashboard(){
             <h2>Baltimore Apartment</h2>
             <span>$600/night</span>
           </div>
-        </a>
+        </Link>
         <div className="col2 ml-auto">
-          <a
-            href="#"
+          <Link
+            to="#"
             className="col2-row1 unit-9 no-height"
             data-aos="fade-up"
             data-aos-delay={200}
@@ -209,9 +211,9 @@ export default function Dashboard(){
               <h2>Austin Apartment</h2>
               <span>$290/night</span>
             </div>
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="#"
             className="col2-row2 unit-9 no-height"
             data-aos="fade-up"
             data-aos-delay={300}
@@ -224,7 +226,7 @@ export default function Dashboard(){
               <h2>Atlanta Apartment</h2>
               <span>$1,290/night</span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -362,15 +364,15 @@ export default function Dashboard(){
           data-aos="fade-up"
           data-aos-delay={100}
         >
-          <a href="single.html">
+          <Link to="single.html">
             <img src="images/img_4.jpg" alt="Image" className="img-fluid" />
-          </a>
+          </Link>
           <div className="p-4 bg-white">
             <span className="d-block text-secondary small text-uppercase">
               Jan 20th, 2019
             </span>
             <h2 className="h5 text-black mb-3">
-              <a href="single.html">Fugit nam obcaecati fuga itaque</a>
+              <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
             </h2>
           </div>
         </div>
@@ -379,15 +381,15 @@ export default function Dashboard(){
           data-aos="fade-up"
           data-aos-delay={200}
         >
-          <a href="single.html">
+          <Link to="single.html">
             <img src="images/img_2.jpg" alt="Image" className="img-fluid" />
-          </a>
+          </Link>
           <div className="p-4 bg-white">
             <span className="d-block text-secondary small text-uppercase">
               Jan 20th, 2019
             </span>
             <h2 className="h5 text-black mb-3">
-              <a href="single.html">Fugit nam obcaecati fuga itaque</a>
+              <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
             </h2>
           </div>
         </div>
@@ -396,15 +398,15 @@ export default function Dashboard(){
           data-aos="fade-up"
           data-aos-delay={300}
         >
-          <a href="single.html">
+          <Link to="single.html">
             <img src="images/img_3.jpg" alt="Image" className="img-fluid" />
-          </a>
+          </Link>
           <div className="p-4 bg-white">
             <span className="d-block text-secondary small text-uppercase">
               Jan 20th, 2019
             </span>
             <h2 className="h5 text-black mb-3">
-              <a href="single.html">Fugit nam obcaecati fuga itaque</a>
+              <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
             </h2>
           </div>
         </div>
@@ -414,24 +416,24 @@ export default function Dashboard(){
   <div className="bg-primary" data-aos="fade">
     <div className="container">
       <div className="row">
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-facebook text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-twitter text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-instagram text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-linkedin text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-pinterest text-white" />
-        </a>
-        <a href="#" className="col-2 text-center py-4 social-icon d-block">
+        </Link>
+        <Link to="#" className="col-2 text-center py-4 social-icon d-block">
           <span className="icon-youtube text-white" />
-        </a>
+        </Link>
       </div>
     </div>
   </div>
