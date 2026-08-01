@@ -1,26 +1,19 @@
-
 import { toast } from "react-toastify";
 import CartService from "../../../services/CartService";
 import ProductService from "../../../services/ProductService";
-
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Cart() {
 
     const [cart, setCart] = useState([]);
-
     async function fetchCart() {
         try {
             let cartData = await CartService.all();
-            // console.log(cartData);
             let finalCart = [];
 
             for (let item of cartData) {
-                // console.log(item.productId);
                 let product = await ProductService.single(item.productId);
-                // console.log("PRODUCT DATA:", product);
-                // console.log(product);
                 finalCart.push({
                     ...item,
                     name: product?.name,
@@ -40,12 +33,8 @@ export default function Cart() {
 
         await CartService.deleteCat(id);
         toast.success("Product Removed")
-
         fetchCart();
-
     }
-
-
     useEffect(() => {
         fetchCart();
     }, []);
@@ -66,11 +55,7 @@ export default function Cart() {
 
     const decreaseQuantity = async (item) => {
         if (item.quantity === 1) {
-            // Option 1: Delete the item
             await CartService.deleteCat(item.id);
-
-            // Option 2: Simply return if you don't want quantity below 1
-            // return;
         } else {
             await CartService.update(
                 {
@@ -85,7 +70,12 @@ export default function Cart() {
 
         fetchCart(); // Reload cart
     };
+    const grandTotal = cart.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+    );
 
+    console.log("Grand Total =", grandTotal);
 
     return (
         <>
@@ -97,7 +87,7 @@ export default function Cart() {
 
                 <table className="table table-bordered text-center align-middle">
 
-                    <thead className="table-dark">
+                    <thead className="table-Light">
 
                         <tr>
                             <th>Image</th>
@@ -184,12 +174,21 @@ export default function Cart() {
 
                 <div className="text-end">
 
+
+                    <h3>Grand Total: ₹ {grandTotal}</h3>
                     <Link
                         to="/checkout"
+                        state={{ totalAmount: grandTotal }}
                         className="btn btn-success"
                     >
                         Proceed To Checkout
                     </Link>
+                    {/* <Link
+                        to="/checkout"
+                        className="btn btn-success"
+                    >
+                        Proceed To Checkout
+                    </Link> */}
 
                 </div>
 

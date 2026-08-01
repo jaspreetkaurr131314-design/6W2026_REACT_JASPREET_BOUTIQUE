@@ -100,36 +100,15 @@ export default function Home() {
               style={{ backgroundImage: 'url("public/images/js.jpg")' }}
             />
             <div className="text">
-              <h2>Property Information</h2>
-              <p className="mb-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis quae
-                obcaecati doloribus distinctio, aliquam vero? Molestias, amet,
-                eveniet.
-              </p>
-              <ul className="property-list-details mb-5">
-                <li className="text-black">
-                  Property Name:{" "}
-                  <strong className="text-black">Marga Luxury Suite</strong>
-                </li>
-                <li>
-                  Room: <strong>2</strong>
-                </li>
-                <li>
-                  Total Area: <strong>482 Square Feets</strong>
-                </li>
-                <li>
-                  Category: <strong>Modern House</strong>
-                </li>
-                <li>
-                  Lunch Date: Jan 20, 2019
-                  <strong />
-                </li>
-              </ul>
-              <p>
-                <Link to="#" className="btn btn-primary px-4 py-3">
-                  Get Details
-                </Link>
-              </p>
+              <h2>Product Information</h2>
+              Discover elegance and comfort with our premium fashion collection. Each outfit is carefully designed using high-quality fabric to provide a stylish look and a perfect fit. Ideal for festive occasions, casual outings, and special events.
+
+              Product Name: Traditional Wear Suit.
+
+              <Link to="#" className="btn btn-primary px-4 py-3">
+                Get Details
+              </Link>
+
             </div>
           </div>
         </div>
@@ -176,13 +155,6 @@ export default function Home() {
 
             </div>
             <div className="row">
-
-
-              <div className="col-md-12 text-center mt-5" data-aos="fade-up">
-                <Link to="#" className="btn btn-primary">
-                  Browse All Apartments
-                </Link>
-              </div>
             </div>
           </div>
         </div>
@@ -193,11 +165,10 @@ export default function Home() {
                 className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto"
                 data-aos="fade-up"
               >
-                <h2 className="mb-5">Featured Apartments</h2>
+                <h2>Featured Collection</h2>
+
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-                  fugit nam obcaecati fuga itaque deserunt officia, error reiciendis
-                  ab quod?
+                  Discover our exclusive range of trendy and elegant outfits crafted with premium-quality fabrics. Whether you're looking for casual wear, festive attire, or stylish traditional dresses, our featured collection offers the perfect blend of fashion, comfort, and affordability.
                 </p>
               </div>
             </div>
@@ -210,11 +181,11 @@ export default function Home() {
               >
                 <div
                   className="image"
-                  style={{ backgroundImage: 'url("images/img_2.jpg")' }}
+                  style={{ backgroundImage: 'url("public/images/images (2).jpg")' }}
                 />
                 <div className="unit-9-content">
-                  <h2>Baltimore Apartment</h2>
-                  <span>$600/night</span>
+                  {/* <h2>Baltimore Apartment</h2> */}
+                  {/* <span>$600/night</span> */}
                 </div>
               </Link>
               <div className="col2 ml-auto">
@@ -226,11 +197,11 @@ export default function Home() {
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("images/img_3.jpg")' }}
+                    style={{ backgroundImage: 'url("public/images/images (3).jpg")' }}
                   />
                   <div className="unit-9-content">
-                    <h2>Austin Apartment</h2>
-                    <span>$290/night</span>
+                    <h2>western</h2>
+                    {/* <span>$290/night</span> */}
                   </div>
                 </Link>
                 <Link
@@ -241,125 +212,13 @@ export default function Home() {
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("images/img_1.jpg")' }}
+                    style={{ backgroundImage: 'url("public/images/image 4.jpg")' }}
                   />
                   <div className="unit-9-content">
-                    <h2>Atlanta Apartment</h2>
-                    <span>$1,290/night</span>
+                    <h2>jacket</h2>
+                    {/* <span>$1,290/night</span> */}
                   </div>
                 </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="site-section block-13">
-          <div className="container" data-aos="fade-up">
-            <div className="row">
-              <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
-                <h2 className="mb-5">Love By Our Customers</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-                  fugit nam obcaecati fuga itaque deserunt officia, error reiciendis
-                  ab quod?
-                </p>
-              </div>
-            </div>
-            <div className="nonloop-block-13 owl-carousel">
-              <div className="text-center p-3 p-md-5 bg-white">
-                <div className="mb-4">
-                  <img
-                    src="images/person_1.jpg"
-                    alt="Image"
-                    className="w-50 mx-auto img-fluid rounded-circle"
-                  />
-                </div>
-                <div className="text-black">
-                  <h3 className="font-weight-light h5">Megan Smith</h3>
-                  <p className="font-italic">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                    iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?”
-                  </p>
-                </div>
-              </div>
-              <div className="text-center p-3 p-md-5 bg-white">
-                <div className="mb-4">
-                  <img
-                    src="images/person_2.jpg"
-                    alt="Image"
-                    className="w-50 mx-auto img-fluid rounded-circle"
-                  />
-                </div>
-                <div className="text-black">
-                  <h3 className="font-weight-light h5">Brooke Cagle</h3>
-                  <p className="font-italic">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                    iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?”
-                  </p>
-                </div>
-              </div>
-              <div className="text-center p-3 p-md-5 bg-white">
-                <div className="mb-4">
-                  <img
-                    src="images/person_3.jpg"
-                    alt="Image"
-                    className="w-50 mx-auto img-fluid rounded-circle"
-                  />
-                </div>
-                <div className="text-black">
-                  <h3 className="font-weight-light h5">Philip Martin</h3>
-                  <p className="font-italic">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                    iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?”
-                  </p>
-                </div>
-              </div>
-              <div className="text-center p-3 p-md-5 bg-white">
-                <div className="mb-4">
-                  <img
-                    src="images/person_1.jpg"
-                    alt="Image"
-                    className="w-50 mx-auto img-fluid rounded-circle"
-                  />
-                </div>
-                <div className="text-black">
-                  <h3 className="font-weight-light h5">Steven Ericson</h3>
-                  <p className="font-italic">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                    iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?”
-                  </p>
-                </div>
-              </div>
-              <div className="text-center p-3 p-md-5 bg-white">
-                <div className="mb-4">
-                  <img
-                    src="images/person_2.jpg"
-                    alt="Image"
-                    className="w-50 mx-auto img-fluid rounded-circle"
-                  />
-                </div>
-                <div className="text-black">
-                  <h3 className="font-weight-light h5">Nathan Dumlao</h3>
-                  <p className="font-italic">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                    iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?”
-                  </p>
-                </div>
-              </div>
-              <div className="text-center p-3 p-md-5 bg-white">
-                <div className="mb-4">
-                  <img
-                    src="images/person_4.jpg"
-                    alt="Image"
-                    className="w-50 mx-auto img-fluid rounded-circle"
-                  />
-                </div>
-                <div className="text-black">
-                  <h3 className="font-weight-light h5">Brook Smith</h3>
-                  <p className="font-italic">
-                    “Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et,
-                    iusto. Aliquam illo, cum sed ea? Ducimus quos, ea?”
-                  </p>
-                </div>
               </div>
             </div>
           </div>
@@ -371,12 +230,15 @@ export default function Home() {
                 className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto"
                 data-aos="fade-up"
               >
-                <h2 className="mb-5">News &amp; Events</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-                  fugit nam obcaecati fuga itaque deserunt officia, error reiciendis
-                  ab quod?
-                </p>
+                <>
+                  <h2>Fashion News &amp; Updates</h2>
+                  <p>
+                    Explore our newest arrivals, special discounts, festive collections, and
+                    fashion updates. We keep our customers informed about the latest trends and
+                    exciting events at Jaspreet Boutique.
+                  </p>
+                </>
+
               </div>
             </div>
             <div className="row">
@@ -385,52 +247,55 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay={100}
               >
-                <Link to="single.html">
-                  <img src="images/img_4.jpg" alt="Image" className="img-fluid" />
+                <Link to="#">
+                  <img src="public/images/images (6).jpg" alt="Fashion Trend" className="img-fluid" />
                 </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
-                    Jan 20th, 2019
+                    Aug 01, 2026
                   </span>
                   <h2 className="h5 text-black mb-3">
-                    <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
+                    <Link to="#">Latest Summer Collection Launch</Link>
                   </h2>
                 </div>
               </div>
+
               <div
                 className="col-md-6 col-lg-4 mb-4 mb-lg-0"
                 data-aos="fade-up"
                 data-aos-delay={200}
               >
-                <Link to="single.html">
-                  <img src="images/img_2.jpg" alt="Image" className="img-fluid" />
+                <Link to="#">
+                  <img src="public/images/images (7).jpg" alt="Special Offer" className="img-fluid" />
                 </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
-                    Jan 20th, 2019
+                    Aug 05, 2026
                   </span>
                   <h2 className="h5 text-black mb-3">
-                    <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
+                    <Link to="#">Special Festive Discount Offers</Link>
                   </h2>
                 </div>
               </div>
+
               <div
                 className="col-md-6 col-lg-4 mb-4 mb-lg-0"
                 data-aos="fade-up"
                 data-aos-delay={300}
               >
-                <Link to="single.html">
-                  <img src="images/img_3.jpg" alt="Image" className="img-fluid" />
+                <Link to="#">
+                  <img src="public/images/images (5).jpg" alt="New Arrivals" className="img-fluid" />
                 </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
-                    Jan 20th, 2019
+                    Aug 10, 2026
                   </span>
                   <h2 className="h5 text-black mb-3">
-                    <Link to="single.html">Fugit nam obcaecati fuga itaque</Link>
+                    <Link to="#">New Designer Wear Arrivals</Link>
                   </h2>
                 </div>
               </div>
+              
             </div>
           </div>
         </div>

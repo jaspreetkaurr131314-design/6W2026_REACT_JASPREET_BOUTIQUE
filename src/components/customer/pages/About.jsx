@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function About(){
     return(
         <>
-        
+
         <>
   <div className="site-mobile-menu">
     <div className="site-mobile-menu-header">
@@ -13,10 +13,9 @@ export default function About(){
     </div>
     <div className="site-mobile-menu-body" />
   </div>{" "}
-  {/* .site-mobile-menu */}
   <div
     className="site-blocks-cover inner-page-cover overlay"
-    style={{ backgroundImage: 'url("images/hero_bg_1.jpg")' }}
+    style={{ backgroundImage: 'url("public/background.jpg")' }}
     data-aos="fade"
     data-stellar-background-ratio="0.5"
   >

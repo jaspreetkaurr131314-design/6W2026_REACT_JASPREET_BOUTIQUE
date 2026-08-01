@@ -1,5 +1,6 @@
 import { signOut } from "firebase/auth"
-import { auth } from "../Firebase/firebaseConfig"
+import { auth } from "../firebase/FirebaseConfig"
+
 
 class AuthService {
 
@@ -11,14 +12,14 @@ class AuthService {
 
     }
 
-    getEmail(){
+    getEmail() {
         return localStorage.getItem("email")
     }
-    getUserType(){
+    getUserType() {
         return localStorage.getItem("userType")
     }
 
-    logout(){
+    logout() {
         localStorage.clear()
         sessionStorage.clear()
         signOut(auth)

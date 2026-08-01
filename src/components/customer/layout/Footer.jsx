@@ -9,15 +9,21 @@ export default function Footer() {
                         <div className="col-lg-4">
                             <div className="mb-5">
                                 <h3 className="footer-heading mb-4">About Fashion-Zone</h3>
+
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
-                                    pariatur reprehenderit vero atque, consequatur id ratione, et non
-                                    dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis,
-                                    minima minus odio!
+                                    Fashion Zone is your destination for trendy, elegant, and affordable fashion.
+                                    We offer a wide range of traditional and modern outfits designed with
+                                    premium-quality fabrics to ensure comfort, style, and confidence for every
+                                    occasion.
                                 </p>
                             </div>
                             <div className="mb-5">
-                                <h3 className="footer-heading mb-4">Subscribe</h3>
+                                <h3>Subscribe</h3>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    placeholder="Enter your email"
+                                />
                                 <form action="#" method="post" className="site-block-subscribe">
                                     <div className="input-group mb-3">
                                         <input
@@ -47,18 +53,11 @@ export default function Footer() {
                                 </div>
                                 <div className="col-md-6 col-lg-6">
                                     <ul className="list-unstyled">
-                                        <li>
-                                            <Link to="#">Home</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="#">Apartments</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="#">News</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="#">Featured Apartment</Link>
-                                        </li>
+                                        <li><Link to="/">Home</Link></li>
+                                        <li><Link to="/product">Products</Link></li>
+                                        <li><Link to="/category">Categories</Link></li>
+                                        <li><Link to="/about">About Us</Link></li>
+                                        <li><Link to="/contact">Contact Us</Link></li>
                                     </ul>
                                 </div>
                                 <div className="col-md-6 col-lg-6">
@@ -121,14 +120,9 @@ export default function Footer() {
                     </div>
                     <div className="row pt-5 mt-5 text-center">
                         <div className="col-md-12">
-                            <p>
-                                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-                                Copyright © All rights reserved | This template is made with{" "}
-                                <i className="icon-heart text-danger" aria-hidden="true" /> by{" "}
-                                <Link to="https://colorlib.com" target="_blank">
-                                    Colorlib
-                                </Link>
-                                {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
+                            <p className="text-center mt-4">
+                                Copyright © 2026 All Rights Reserved |
+                                Designed & Developed by Jaspreet Kaur
                             </p>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import OrderService from "../../../services/OrderService";
+import { useLocation } from "react-router-dom";
 export default function Checkout() {
 
     const [name, setName] = useState("");
@@ -11,7 +12,10 @@ export default function Checkout() {
     const [pincode, setPincode] = useState("");
     const [paymentMethod, setPaymentMethod] = useState("");
     const [phone, setPhone] = useState("");
+    const location = useLocation();
 
+    const totalAmount = location.state?.totalAmount || 0;
+    console.log("TOTAL AMOUNT =", totalAmount);
     async function placeOrder(e) {
 
         e.preventDefault();
@@ -19,7 +23,6 @@ export default function Checkout() {
         let orderData = {
 
             customerId: "",
-
             name: name,
             phone: phone,
             houseNo: houseNo,
@@ -29,7 +32,7 @@ export default function Checkout() {
             state: state,
             pincode: pincode,
 
-            totalAmount: 100,
+            totalAmount: totalAmount,
 
             paymentMethod: paymentMethod
 
@@ -58,13 +61,13 @@ export default function Checkout() {
         }
 
     }
-    
-     async function openRazorpay(orderData) {
+
+    async function openRazorpay(orderData) {
         const options = {
 
             key: "rzp_test_THdvTEQPCamtpB",
 
-            amount: 10000, // ₹100 = 10000 paise
+            amount: totalAmount * 100,// ₹100 = 10000 paise
 
             currency: "INR",
 
@@ -382,18 +385,27 @@ export default function Checkout() {
 
 
                                 {/* Place Order */}
+                                <div className="container py-5">
 
-                                <div className="d-flex justify-content-center">
+                                    <h3 className="mb-4">
+                                        Total Amount: ₹ {totalAmount}
+                                    </h3>
 
-                                    <button
-                                        type="submit"
-                                        className="btn btn-success"
-                                    >
+                                    {/* baki form */}
 
-                                        Place Order
+                                    <div className="d-flex justify-content-center">
 
-                                    </button>
+                                        <button
+                                            type="submit"
+                                            className="btn btn-success"
+                                        >
 
+                                            Place Order
+
+                                        </button>
+
+
+                                    </div>
                                 </div>
 
                             </form>
