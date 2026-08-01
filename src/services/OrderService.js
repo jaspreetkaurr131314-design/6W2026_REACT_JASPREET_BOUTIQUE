@@ -9,7 +9,7 @@ import {
 } from "firebase/firestore";
 
 
-import { db } from "../firebase/FirebaseConfig";
+import { db } from "../firebase/firebaseConfig";
 
 import OrderModel from "../model/OrderModel";
 

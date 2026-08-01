@@ -1,5 +1,5 @@
 import { addDoc, collection, getDocs, getDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
-import { db } from "../firebase/FirebaseConfig";
+import { db } from "../firebase/firebaseConfig";
 import CartModel from "../model/CartModel";
 
 class CartService {

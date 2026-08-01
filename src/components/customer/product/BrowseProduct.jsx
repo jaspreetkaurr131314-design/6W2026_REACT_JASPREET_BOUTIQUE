@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { FadeLoader, PacmanLoader } from "react-spinners";
 import { useNavigate } from "react-router-dom";
-import { auth } from "../../../firebase/FirebaseConfig";
+import { auth } from "../../../firebase/firebaseConfig";
 import Swal from "sweetalert2";
 import CategoryService from "../../../services/CategoryService";
 import ProductService from "../../../services/ProductService";
