@@ -97,7 +97,7 @@ export default function Home() {
           <div className="featured-property-half d-flex">
             <div
               className="image"
-              style={{ backgroundImage: 'url("public/images/js.jpg")' }}
+              style={{ backgroundImage: 'url("public/background.jpg")' }}
             />
             <div className="text">
               <h2>Product Information</h2>
@@ -105,7 +105,7 @@ export default function Home() {
 
               Product Name: Traditional Wear Suit.
 
-              <Link to="" className="btn btn-primary px-4 py-3">
+              <Link to="/background.jpg" className="btn btn-primary px-4 py-3">
                 Get Details
               </Link>
 

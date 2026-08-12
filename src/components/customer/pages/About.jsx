@@ -15,7 +15,7 @@ export default function About(){
   </div>{" "}
   <div
     className="site-blocks-cover inner-page-cover overlay"
-    style={{ backgroundImage: 'url("public/background.jpg")' }}
+    style={{ backgroundImage: 'url("/background.jpg")'}}
     data-aos="fade"
     data-stellar-background-ratio="0.5"
   >
