@@ -105,7 +105,7 @@ export default function Home() {
 
               Product Name: Traditional Wear Suit.
 
-              <Link to="#" className="btn btn-primary px-4 py-3">
+              <Link to="" className="btn btn-primary px-4 py-3">
                 Get Details
               </Link>
 
@@ -205,17 +205,18 @@ export default function Home() {
                   </div>
                 </Link>
                 <Link
-                  to="#"
+                  to=""
                   className="col2-row2 unit-9 no-height"
                   data-aos="fade-up"
                   data-aos-delay={300}
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("public/images/image 4.jpg")' }}
+                    style={{ backgroundImage: 'url("public/images/image(8).jpg")' }}
                   />
                   <div className="unit-9-content">
                     <h2>jacket</h2>
+
                     {/* <span>$1,290/night</span> */}
                   </div>
                 </Link>
