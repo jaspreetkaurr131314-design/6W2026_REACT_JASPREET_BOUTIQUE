@@ -97,7 +97,7 @@ export default function Home() {
           <div className="featured-property-half d-flex">
             <div
               className="image"
-              style={{ backgroundImage: 'url("public/images/js.jpg")' }}
+              style={{ backgroundImage: 'url("/background.jpg")' }}
             />
             <div className="text">
               <h2>Product Information</h2>
@@ -181,7 +181,7 @@ export default function Home() {
               >
                 <div
                   className="image"
-                  style={{ backgroundImage: 'url("public/images/images (2).jpg")' }}
+                  style={{ backgroundImage: 'url("/background.jpg")' }}
                 />
                 <div className="unit-9-content">
                   {/* <h2>Baltimore Apartment</h2> */}
