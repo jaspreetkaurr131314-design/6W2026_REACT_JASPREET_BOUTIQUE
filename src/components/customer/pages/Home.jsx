@@ -69,7 +69,7 @@ export default function Home() {
         {/* .site-mobile-menu */}
         <div
           className="site-blocks-cover overlay"
-          style={{ backgroundImage: 'url("/background.jpg")' }}
+          style={{ backgroundImage: 'url("photo.avif")' }}
           data-aos="fade"
           data-stellar-background-ratio="0.5"
         >
@@ -97,7 +97,7 @@ export default function Home() {
           <div className="featured-property-half d-flex">
             <div
               className="image"
-              style={{ backgroundImage: 'url("public/background.jpg")' }}
+              style={{ backgroundImage: 'url("public/images/js.jpg")' }}
             />
             <div className="text">
               <h2>Product Information</h2>
@@ -105,7 +105,7 @@ export default function Home() {
 
               Product Name: Traditional Wear Suit.
 
-              <Link to="/background.jpg" className="btn btn-primary px-4 py-3">
+              <Link to="#" className="btn btn-primary px-4 py-3">
                 Get Details
               </Link>
 
@@ -205,18 +205,17 @@ export default function Home() {
                   </div>
                 </Link>
                 <Link
-                  to=""
+                  to="#"
                   className="col2-row2 unit-9 no-height"
                   data-aos="fade-up"
                   data-aos-delay={300}
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("public/images/image(8).jpg")' }}
+                    style={{ backgroundImage: 'url("public/images/image 4.jpg")' }}
                   />
                   <div className="unit-9-content">
                     <h2>jacket</h2>
-
                     {/* <span>$1,290/night</span> */}
                   </div>
                 </Link>

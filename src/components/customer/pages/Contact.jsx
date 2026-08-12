@@ -16,7 +16,7 @@ export default function Contact() {
                 {/* .site-mobile-menu */}
                 <div
                     className="site-blocks-cover inner-page-cover overlay"
-                    style={{ backgroundImage: 'url("/background.jpg")' }}
+                    style={{ backgroundImage: 'url("/photo.avif")' }}
                     data-aos="fade"
                     data-stellar-background-ratio="0.5"
                 >
@@ -30,6 +30,7 @@ export default function Contact() {
                                 <h1 className="text-white">Contact Us</h1>
                                 <p>Have questions about our products or orders?
                                     We are happy to help you.
+                                          We are happy to help you.
                                 </p>
                             </div>
                         </div>
