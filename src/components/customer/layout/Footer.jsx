@@ -60,7 +60,7 @@ export default function Footer() {
                                         <li><Link to="/contact">Contact Us</Link></li>
                                     </ul>
                                 </div>
-                                <div className="col-md-6 col-lg-6">
+                                <div className="col-md-12 col-lg-12">
                                     <ul className="list-unstyled">
                                         <li>
                                             <Link to="#">About Us</Link>
@@ -97,26 +97,7 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="col-lg-4 mb-5 mb-lg-0">
-                            <div className="mb-5">
-                                <h3 className="footer-heading mb-4">Watch Live Streaming</h3>
-                                <div className="block-16">
-                                    <figure>
-                                        <img
-                                            src="images/img_1.jpg"
-                                            alt="Image placeholder"
-                                            className="img-fluid rounded"
-                                        />
-                                        <Link
-                                            to="https://vimeo.com/channels/staffpicks/93951774"
-                                            className="play-button popup-vimeo"
-                                        >
-                                            <span className="icon-play" />
-                                        </Link>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div> */}
+                        
                     </div>
                     <div className="row pt-5 mt-5 text-center">
                         <div className="col-md-12">
