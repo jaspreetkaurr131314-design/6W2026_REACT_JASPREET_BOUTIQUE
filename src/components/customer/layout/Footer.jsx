@@ -60,7 +60,7 @@ export default function Footer() {
                                         <li><Link to="/contact">Contact Us</Link></li>
                                     </ul>
                                 </div>
-                                <div className="col-md-12 col-lg-12">
+                                <div className="col-md-6 col-lg-6">
                                     <ul className="list-unstyled">
                                         <li>
                                             <Link to="#">About Us</Link>
