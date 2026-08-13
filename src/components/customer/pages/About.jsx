@@ -36,7 +36,7 @@ export default function About(){
     <div className="container">
       <div className="row">
         <div className="col-lg-6">
-          <img src="/images/image(8).jpg" alt="Image" className="img-fluid" />
+          {/* <img src="/images/image(8).jpg" alt="Image" className="img-fluid" /> */}
         </div>
         <div className="col-lg-6">
           <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
