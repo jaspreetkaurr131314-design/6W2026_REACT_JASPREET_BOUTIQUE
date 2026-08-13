@@ -97,7 +97,7 @@ export default function Footer() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-4 mb-5 mb-lg-0">
+                        {/* <div className="col-lg-4 mb-5 mb-lg-0">
                             <div className="mb-5">
                                 <h3 className="footer-heading mb-4">Watch Live Streaming</h3>
                                 <div className="block-16">
@@ -116,7 +116,7 @@ export default function Footer() {
                                     </figure>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                     <div className="row pt-5 mt-5 text-center">
                         <div className="col-md-12">
