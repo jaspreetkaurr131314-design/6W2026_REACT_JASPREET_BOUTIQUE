@@ -197,7 +197,7 @@ export default function Home() {
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("public/images/images.jpg")' }}
+                    style={{ backgroundImage: 'url("public/images/images (10).jpg")' }}
                   />
                   <div className="unit-9-content">
                     <h2>western</h2>
