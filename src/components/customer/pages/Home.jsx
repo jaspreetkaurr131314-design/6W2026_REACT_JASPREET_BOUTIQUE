@@ -181,7 +181,7 @@ export default function Home() {
               >
                 <div
                   className="image"
-                  style={{ backgroundImage: 'url("")' }}
+                  style={{ backgroundImage: 'url("/images/images (10).jpg")' }}
                 />
                 <div className="unit-9-content">
                   {/* <h2>Baltimore Apartment</h2> */}
@@ -197,7 +197,7 @@ export default function Home() {
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("public/images/images (10).jpg")' }}
+                    style={{ backgroundImage: 'url("/images/images (10).jpg")' }}
                   />
                   <div className="unit-9-content">
                     <h2>western</h2>
@@ -212,7 +212,7 @@ export default function Home() {
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("public/images/image(8).jpg")' }}
+                    style={{ backgroundImage: 'url("/images/image(8).jpg")' }}
                   />
                   <div className="unit-9-content">
                     <h2>jacket</h2>
@@ -248,7 +248,7 @@ export default function Home() {
                 data-aos-delay={100}
               >
                 <Link to="#">
-                  <img src="public/images/images (6).jpg" alt="Fashion Trend" className="img-fluid" />
+                  <img src="/images/images (6).jpg" alt="Fashion Trend" className="img-fluid" />
                 </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
