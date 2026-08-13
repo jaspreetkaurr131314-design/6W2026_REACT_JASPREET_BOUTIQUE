@@ -226,7 +226,7 @@ export default function About(){
   <div className="site-section">
     <div className="container">
       <div className="row">
-        <div
+        {/* <div
           className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto"
           data-aos="fade-up"
         >
@@ -236,7 +236,7 @@ export default function About(){
             fugit nam obcaecati fuga itaque deserunt officia, error reiciendis
             ab quod?
           </p>
-        </div>
+        </div> */}
       </div>
       <div className="site-block-retro d-block d-md-flex">
         <Link
