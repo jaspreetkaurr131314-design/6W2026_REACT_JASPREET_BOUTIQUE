@@ -97,7 +97,7 @@ export default function Home() {
           <div className="featured-property-half d-flex">
             <div
               className="image"
-              style={{ backgroundImage: 'url("/background.jpg")' }}
+              style={{ backgroundImage: 'url("public/images/images (5).jpg")' }}
             />
             <div className="text">
               <h2>Product Information</h2>
@@ -181,7 +181,7 @@ export default function Home() {
               >
                 <div
                   className="image"
-                  style={{ backgroundImage: 'url("/background.jpg")' }}
+                  style={{ backgroundImage: 'url("")' }}
                 />
                 <div className="unit-9-content">
                   {/* <h2>Baltimore Apartment</h2> */}
@@ -197,7 +197,7 @@ export default function Home() {
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("public/images/images (3).jpg")' }}
+                    style={{ backgroundImage: 'url("public/images/images.jpg")' }}
                   />
                   <div className="unit-9-content">
                     <h2>western</h2>
@@ -212,7 +212,7 @@ export default function Home() {
                 >
                   <div
                     className="image"
-                    style={{ backgroundImage: 'url("public/images/image 4.jpg")' }}
+                    style={{ backgroundImage: 'url("public/images/image(8).jpg")' }}
                   />
                   <div className="unit-9-content">
                     <h2>jacket</h2>
