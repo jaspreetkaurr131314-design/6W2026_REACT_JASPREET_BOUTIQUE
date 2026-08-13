@@ -266,7 +266,7 @@ export default function Home() {
                 data-aos-delay={200}
               >
                 <Link to="#">
-                  <img src="public/images/images (7).jpg" alt="Special Offer" className="img-fluid" />
+                  <img src="/images/images (7).jpg" alt="Special Offer" className="img-fluid" />
                 </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
@@ -284,7 +284,7 @@ export default function Home() {
                 data-aos-delay={300}
               >
                 <Link to="#">
-                  <img src="public/images/images (5).jpg" alt="New Arrivals" className="img-fluid" />
+                  <img src="/images/images (5).jpg" alt="New Arrivals" className="img-fluid" />
                 </Link>
                 <div className="p-4 bg-white">
                   <span className="d-block text-secondary small text-uppercase">
