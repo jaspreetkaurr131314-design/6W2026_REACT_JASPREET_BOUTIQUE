@@ -25,81 +25,81 @@ export default function AdminHeader() {
                             </h1>
                         </div>
                         <div className="col-4 col-md-4 col-lg-8">
-                           <nav
-    className="navbar navbar-expand-lg navbar-dark"
-    style={{
-        backgroundColor: "#000",
-        minHeight: "70px",
-        position: "relative",
-        zIndex: 1000
-    }}
->
-    <div className="container-fluid">
+                            <nav
+                                className="navbar navbar-expand-lg navbar-dark"
+                                style={{
+                                    backgroundColor: "#000",
+                                    minHeight: "70px",
+                                    position: "relative",
+                                    zIndex: 1000
+                                }}
+                            >
+                                <div className="container-fluid">
 
-        <Link
-            className="navbar-brand text-white fw-bold"
-            to="/admin"
-        >
-            Fashion Zone
-        </Link>
+                                    <Link
+                                        className="navbar-brand text-white fw-bold"
+                                        to="/admin"
+                                    >
+                                        Fashion Zone
+                                    </Link>
 
-        <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#adminNavbar"
-        >
-            <span className="navbar-toggler-icon"></span>
-        </button>
+                                    <button
+                                        className="navbar-toggler"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#adminNavbar"
+                                    >
+                                        <span className="navbar-toggler-icon"></span>
+                                    </button>
 
-        <div
-            className="collapse navbar-collapse"
-            id="adminNavbar"
-        >
+                                    <div
+                                        className="collapse navbar-collapse"
+                                        id="adminNavbar"
+                                    >
 
-            <ul className="navbar-nav ms-auto">
+                                        <ul className="navbar-nav ms-auto">
 
-                <li className="nav-item">
-                    <Link
-                        className="nav-link text-white"
-                        to="/admin"
-                    >
-                        Dashboard
-                    </Link>
-                </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link text-white"
+                                                    to="/admin"
+                                                >
+                                                    Dashboard
+                                                </Link>
+                                            </li>
 
-                <li className="nav-item">
-                    <Link
-                        className="nav-link text-white"
-                        to="/admin/categories"
-                    >
-                        Categories
-                    </Link>
-                </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link text-white"
+                                                    to="/admin/categories"
+                                                >
+                                                    Categories
+                                                </Link>
+                                            </li>
 
-                <li className="nav-item">
-                    <Link
-                        className="nav-link text-white"
-                        to="/admin/product"
-                    >
-                        Products
-                    </Link>
-                </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link text-white"
+                                                    to="/admin/product"
+                                                >
+                                                    Products
+                                                </Link>
+                                            </li>
 
-                <li className="nav-item">
-                    <Link
-                        className="nav-link text-white"
-                        to="/admin/orders"
-                    >
-                        Orders
-                    </Link>
-                </li>
+                                            <li className="nav-item">
+                                                <Link
+                                                    className="nav-link text-white"
+                                                    to="/admin/orders"
+                                                >
+                                                    Orders
+                                                </Link>
+                                            </li>
 
-            </ul>
+                                        </ul>
 
-        </div>
-    </div>
-</nav>
+                                    </div>
+                                </div>
+                            </nav>
                         </div>
                     </div>
                 </div>
