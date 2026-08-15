@@ -3,108 +3,110 @@ import AuthService from "../../../services/AuthService";
 import { toast } from "react-toastify";
 
 export default function AdminHeader() {
-    const nav = useNavigate()
+
+    const navigate = useNavigate();
+
     async function logout() {
-        await AuthService.logout()
+        await AuthService.logout();
         toast.success("Logged Out");
-        nav('/')
+        navigate("/login");
     }
 
     return (
-        <>
-            <div className="site-navbar mt-4">
-                <div className="container py-1">
-                    <div className="row align-items-center">
-                        <div className="col-8 col-md-8 col-lg-4">
-                            <h1 className="mb-0">
-                                <Link to="index.html" className="text-white h2 mb-0">
-                                    <strong>
-                                        Admin panel<span className="text-primary">.</span>
-                                    </strong>
-                                </Link>
-                            </h1>
-                        </div>
-                        <div className="col-4 col-md-4 col-lg-8">
-                            <nav
-                                className="navbar navbar-expand-lg navbar-dark"
-                                style={{
-                                    backgroundColor: "#000",
-                                    minHeight: "70px",
-                                    position: "relative",
-                                    zIndex: 1000
-                                }}
+        <nav
+            className="navbar navbar-expand-lg"
+            style={{
+                backgroundColor: "#000",
+                padding: "15px 0",
+                margin: 0
+            }}
+        >
+
+            <div className="container-fluid px-4">
+
+                {/* Logo */}
+                <Link
+                    to="/admin"
+                    className="navbar-brand text-white fw-bold"
+                >
+                    Fashion Zone
+                </Link>
+
+
+                {/* Mobile Button */}
+                <button
+                    className="navbar-toggler bg-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#adminNavbar"
+                >
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+
+
+                {/* Menu */}
+                <div
+                    className="collapse navbar-collapse"
+                    id="adminNavbar"
+                >
+
+                    <ul className="navbar-nav ms-auto">
+
+                        <li className="nav-item">
+                            <Link
+                                to="/admin"
+                                className="nav-link text-white px-3"
                             >
-                                <div className="container-fluid">
+                                Dashboard
+                            </Link>
+                        </li>
 
-                                    <Link
-                                        className="navbar-brand text-white fw-bold"
-                                        to="/admin"
-                                    >
-                                        Fashion Zone
-                                    </Link>
 
-                                    <button
-                                        className="navbar-toggler"
-                                        type="button"
-                                        data-bs-toggle="collapse"
-                                        data-bs-target="#adminNavbar"
-                                    >
-                                        <span className="navbar-toggler-icon"></span>
-                                    </button>
+                        <li className="nav-item">
+                            <Link
+                                to="/admin/categories"
+                                className="nav-link text-white px-3"
+                            >
+                                Categories
+                            </Link>
+                        </li>
 
-                                    <div
-                                        className="collapse navbar-collapse"
-                                        id="adminNavbar"
-                                    >
 
-                                        <ul className="navbar-nav ms-auto">
+                        <li className="nav-item">
+                            <Link
+                                to="/admin/product"
+                                className="nav-link text-white px-3"
+                            >
+                                Products
+                            </Link>
+                        </li>
 
-                                            <li className="nav-item">
-                                                <Link
-                                                    className="nav-link text-white"
-                                                    to="/admin"
-                                                >
-                                                    Dashboard
-                                                </Link>
-                                            </li>
 
-                                            <li className="nav-item">
-                                                <Link
-                                                    className="nav-link text-white"
-                                                    to="/admin/categories"
-                                                >
-                                                    Categories
-                                                </Link>
-                                            </li>
+                        <li className="nav-item">
+                            <Link
+                                to="/admin/orders"
+                                className="nav-link text-white px-3"
+                            >
+                                Orders
+                            </Link>
+                        </li>
 
-                                            <li className="nav-item">
-                                                <Link
-                                                    className="nav-link text-white"
-                                                    to="/admin/product"
-                                                >
-                                                    Products
-                                                </Link>
-                                            </li>
 
-                                            <li className="nav-item">
-                                                <Link
-                                                    className="nav-link text-white"
-                                                    to="/admin/orders"
-                                                >
-                                                    Orders
-                                                </Link>
-                                            </li>
+                        <li className="nav-item">
+                            <button
+                                onClick={logout}
+                                className="btn btn-link nav-link text-white px-3"
+                            >
+                                Logout
+                            </button>
+                        </li>
 
-                                        </ul>
+                    </ul>
 
-                                    </div>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
                 </div>
+
             </div>
 
-        </>
-    )
+        </nav>
+    );
 }
