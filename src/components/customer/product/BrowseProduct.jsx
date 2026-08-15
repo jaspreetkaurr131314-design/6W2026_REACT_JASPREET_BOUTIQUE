@@ -92,7 +92,43 @@ export default function BrowseProduct() {
     }
 
     return (
+        <>
+ <div className="site-mobile-menu">
+                <div className="site-mobile-menu-header">
+                    <div className="site-mobile-menu-close mt-3">
+                        <span className="icon-close2 js-menu-toggle" />
+                    </div>
+                </div>
 
+                <div className="site-mobile-menu-body" />
+            </div>
+
+            <div
+                className="site-blocks-cover inner-page-cover overlay"
+                style={{ backgroundImage: 'url("/background.jpg")' }}
+                data-aos="fade"
+                data-stellar-background-ratio="0.5"
+            >
+                <div className="container">
+
+                    <div className="row align-items-center justify-content-center">
+
+                        <div
+                            className="col-md-7 text-center"
+                            data-aos="fade-up"
+                            data-aos-delay={400}
+                        >
+
+                            <h1 className="text-white">
+                                Checkout
+                            </h1>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
         <div className="site-section bg-light">
             <div className="container">
                 <div className="row">
@@ -144,6 +180,7 @@ export default function BrowseProduct() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

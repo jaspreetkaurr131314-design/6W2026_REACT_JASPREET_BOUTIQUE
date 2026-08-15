@@ -59,7 +59,7 @@ export default function BrowseCategory() {
                             data-aos="fade-up"
                             data-aos-delay={400}
                         >
-                            <h1 className="text-white">About Us</h1>
+                            <h1 className="text-white">Categories</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
