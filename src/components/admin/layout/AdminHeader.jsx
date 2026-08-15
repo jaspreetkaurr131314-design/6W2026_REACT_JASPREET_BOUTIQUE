@@ -25,40 +25,81 @@ export default function AdminHeader() {
                             </h1>
                         </div>
                         <div className="col-4 col-md-4 col-lg-8">
-                            <nav
-                                className="navbar navbar-expand-lg navbar-dark"
-                                style={{
-                                    backgroundColor: "#000",
-                                    minHeight: "70px",
-                                    position: "relative",
-                                    zIndex: 1000
-                                }}
-                            >
-                                <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
-                                    <Link to="#" className="site-menu-toggle js-menu-toggle text-white">
-                                        <span className="icon-menu h3" />
-                                    </Link>
-                                </div>
-                                <ul className="site-menu js-clone-nav d-none d-lg-block">
-                                    <li className="active">
-                                        <Link to="/admin">Dashboard</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/admin/categories">Categories</Link>
-                                    </li>
+                           <nav
+    className="navbar navbar-expand-lg navbar-dark"
+    style={{
+        backgroundColor: "#000",
+        minHeight: "70px",
+        position: "relative",
+        zIndex: 1000
+    }}
+>
+    <div className="container-fluid">
 
-                                    <li>
-                                        <Link to="/admin/product">Product</Link>
-                                    </li>
-                                    <li>
-                                        <Link to="/admin/orders">Order</Link>
-                                    </li>
+        <Link
+            className="navbar-brand text-white fw-bold"
+            to="/admin"
+        >
+            Fashion Zone
+        </Link>
 
-                                    <li>
-                                        <Link to="" onClick={logout}>Logout</Link>
-                                    </li>
-                                </ul>
-                            </nav>
+        <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#adminNavbar"
+        >
+            <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+            className="collapse navbar-collapse"
+            id="adminNavbar"
+        >
+
+            <ul className="navbar-nav ms-auto">
+
+                <li className="nav-item">
+                    <Link
+                        className="nav-link text-white"
+                        to="/admin"
+                    >
+                        Dashboard
+                    </Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link
+                        className="nav-link text-white"
+                        to="/admin/categories"
+                    >
+                        Categories
+                    </Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link
+                        className="nav-link text-white"
+                        to="/admin/product"
+                    >
+                        Products
+                    </Link>
+                </li>
+
+                <li className="nav-item">
+                    <Link
+                        className="nav-link text-white"
+                        to="/admin/orders"
+                    >
+                        Orders
+                    </Link>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>
                         </div>
                     </div>
                 </div>
