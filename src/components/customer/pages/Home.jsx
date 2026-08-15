@@ -184,7 +184,7 @@ export default function Home() {
                   style={{ backgroundImage: 'url("/images/images (10).jpg")' }}
                 />
                 <div className="unit-9-content">
-                  {/* <h2>Baltimore Apartment</h2> */}
+                  <h2>Traditional</h2>
                   {/* <span>$600/night</span> */}
                 </div>
               </Link>

@@ -37,47 +37,75 @@ export default function BrowseCategory() {
     return (
 
 
-
-        <div className="site-section bg-light">
-            <div className="container">
-                <div className="row">
-                    <div
-                        className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto"
-                        data-aos="fade-up"
-                    >
-                        <h2 className="mb-5">All categories</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-                            fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab
-                            quod?
-                        </p>
+        <>
+            <div className="site-mobile-menu">
+                <div className="site-mobile-menu-header">
+                    <div className="site-mobile-menu-close mt-3">
+                        <span className="icon-close2 js-menu-toggle" />
                     </div>
                 </div>
-                <div className="row">
-                  {categories.map((category, index) => (
-                       <div
-                        className="col-md-6 col-lg-4 mb-4 mb-lg-0"
-                        data-aos="fade-up"
-                        data-aos-delay={100}
-                    >
-                        <Link to="single.html">
-                            <img src={category.image} alt="Image" className="img-fluid" />
-                        </Link>
-                        <div className="p-4 bg-white">
-                            <span className="d-block text-secondary small text-uppercase">
-                              { category.name}
-                            </span>
-                            <h2 className="h5 text-black mb-3">
-                                <Link to="single.html">{category.description}</Link>
-                            </h2>
+                <div className="site-mobile-menu-body" />
+            </div>{" "}
+            <div
+                className="site-blocks-cover inner-page-cover overlay"
+                style={{ backgroundImage: 'url("/background.jpg")' }}
+                data-aos="fade"
+                data-stellar-background-ratio="0.5"
+            >
+                <div className="container">
+                    <div className="row align-items-center justify-content-center">
+                        <div
+                            className="col-md-7 text-center"
+                            data-aos="fade-up"
+                            data-aos-delay={400}
+                        >
+                            <h1 className="text-white">About Us</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                         </div>
                     </div>
-                    ))
-
-                                    }
                 </div>
             </div>
-        </div>
+            <div className="site-section bg-light">
+                <div className="container">
+                    <div className="row">
+                        <div
+                            className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto"
+                            data-aos="fade-up"
+                        >
+                            <h2 className="mb-5">All categories</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
+                                fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab
+                                quod?
+                            </p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {categories.map((category, index) => (
+                            <div
+                                className="col-md-6 col-lg-4 mb-4 mb-lg-0"
+                                data-aos="fade-up"
+                                data-aos-delay={100}
+                            >
+                                <Link to="single.html">
+                                    <img src={category.image} alt="Image" className="img-fluid" />
+                                </Link>
+                                <div className="p-4 bg-white">
+                                    <span className="d-block text-secondary small text-uppercase">
+                                        {category.name}
+                                    </span>
+                                    <h2 className="h5 text-black mb-3">
+                                        <Link to="single.html">{category.description}</Link>
+                                    </h2>
+                                </div>
+                            </div>
+                        ))
+
+                        }
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 

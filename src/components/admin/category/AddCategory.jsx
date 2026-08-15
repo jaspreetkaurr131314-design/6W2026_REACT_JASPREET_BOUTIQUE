@@ -28,10 +28,10 @@ export default function AddCategory() {
             return;
         }
 
-         let imageUrl = ""
-            if (image) {
-                imageUrl = await CloudinaryService.upload(image)
-            }
+        let imageUrl = ""
+        if (image) {
+            imageUrl = await CloudinaryService.upload(image)
+        }
 
         try {
             let payload = {
@@ -60,6 +60,21 @@ export default function AddCategory() {
 
     return (
         <>
+            <div className="site-mobile-menu">
+                <div className="site-mobile-menu-header">
+                    <div className="site-mobile-menu-close mt-3">
+                        <span className="icon-close2 js-menu-toggle" />
+                    </div>
+                </div>
+                <div className="site-mobile-menu-body" />
+            </div>{" "}
+            <div
+                className="site-blocks-cover inner-page-cover overlay"
+                style={{ backgroundImage: 'url("/background.jpg")' }}
+                data-aos="fade"
+                data-stellar-background-ratio="0.5"
+            >
+            </div>
             <div className="site-mobile-menu">
                 <div className="site-mobile-menu-header">
                     <div className="site-mobile-menu-close mt-3">
@@ -102,7 +117,7 @@ export default function AddCategory() {
                                             id="fullname"
                                             className="form-control"
                                             placeholder="Category Name"
-                                            onChange={(e)=>setCategoryName(e.target.value)}
+                                            onChange={(e) => setCategoryName(e.target.value)}
                                         />
                                     </div>
                                 </div>
@@ -116,7 +131,7 @@ export default function AddCategory() {
                                             id="desc"
                                             className="form-control"
                                             placeholder="Description"
-                                            onChange={(e)=>setDescription(e.target.value)}
+                                            onChange={(e) => setDescription(e.target.value)}
                                         />
                                     </div>
                                 </div> <div className="row form-group">
@@ -129,16 +144,16 @@ export default function AddCategory() {
                                             id="desc"
                                             className="form-control"
                                             placeholder="Image"
-                                            onChange={(e)=>setImage(e.target.files[0])}
+                                            onChange={(e) => setImage(e.target.files[0])}
                                         />
                                     </div>
                                 </div>
 
                                 <div className="d-flex justify-content-center">
-                                        <button
-                                            type="submit"
-                                            className="btn btn-primary py-3 px-4"
-                                        > Add category</button>
+                                    <button
+                                        type="submit"
+                                        className="btn btn-primary py-3 px-4"
+                                    > Add category</button>
                                 </div>
                             </form>
                         </div>

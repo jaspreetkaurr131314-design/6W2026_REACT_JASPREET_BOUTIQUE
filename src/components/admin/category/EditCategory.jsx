@@ -69,6 +69,7 @@ export default function EditCategory() {
 
     return (
         <>
+   
             <div className="site-mobile-menu">
                 <div className="site-mobile-menu-header">
                     <div className="site-mobile-menu-close mt-3">
@@ -80,7 +81,7 @@ export default function EditCategory() {
             {/* .site-mobile-menu */}
             <div
                 className="site-blocks-cover inner-page-cover overlay"
-                style={{ backgroundImage: 'url("images/hero_bg_1.jpg")' }}
+                style={{ backgroundImage: 'url("/background.jpg")' }}
                 data-aos="fade"
                 data-stellar-background-ratio="0.5"
             >

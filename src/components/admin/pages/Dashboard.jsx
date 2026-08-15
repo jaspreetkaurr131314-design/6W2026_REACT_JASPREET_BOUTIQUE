@@ -15,7 +15,7 @@ export default function Dashboard(){
   {/* .site-mobile-menu */}
   <div
     className="site-blocks-cover overlay"
-    style={{ backgroundImage: 'url("images/hero_bg_2.jpg")' }}
+    style={{ backgroundImage: 'url("public/background.jpg")' }}
     data-aos="fade"
     data-stellar-background-ratio="0.5"
   >
