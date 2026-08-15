@@ -120,7 +120,7 @@ export default function BrowseProduct() {
                         >
 
                             <h1 className="text-white">
-                                Checkout
+                                Product
                             </h1>
 
                         </div>
