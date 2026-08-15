@@ -26,8 +26,13 @@ export default function AdminHeader() {
                         </div>
                         <div className="col-4 col-md-4 col-lg-8">
                             <nav
-                                className="site-navigation text-right text-md-right"
-                                role="navigation"
+                                className="navbar navbar-expand-lg navbar-dark"
+                                style={{
+                                    backgroundColor: "#000",
+                                    minHeight: "70px",
+                                    position: "relative",
+                                    zIndex: 1000
+                                }}
                             >
                                 <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
                                     <Link to="#" className="site-menu-toggle js-menu-toggle text-white">
