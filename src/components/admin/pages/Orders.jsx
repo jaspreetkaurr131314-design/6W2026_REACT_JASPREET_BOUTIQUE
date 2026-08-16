@@ -62,7 +62,7 @@ export default function Orders() {
 
 
     async function deleteOrder(id) {
-        console.log("DELETE ID:", id);
+    console.log("DELETE ID:", id);
         // if (!id) {
         //     toast.error("Order ID missing!");
         //     return;
@@ -71,7 +71,7 @@ export default function Orders() {
         try {
 
             await OrderService.deleteOrder(id);
-            console.log("DELETE SUCCESS");
+        console.log("DELETE SUCCESS");
 
             toast.success("Order Deleted Successfully!");
             fetchOrders();
@@ -90,41 +90,7 @@ export default function Orders() {
     return (
 
         <>
-            <div className="site-mobile-menu">
-                <div className="site-mobile-menu-header">
-                    <div className="site-mobile-menu-close mt-3">
-                        <span className="icon-close2 js-menu-toggle" />
-                    </div>
-                </div>
-                <div className="site-mobile-menu-body" />
-            </div>{" "}
-            <div
-                className="site-blocks-cover inner-page-cover overlay"
-                style={{
-                    backgroundImage: 'url("/background.jpg")',
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                    backgroundAttachment: "fixed",
-                    minHeight: "100vh",
-                    padding: "80px 30px"
-                }}
-            >
 
-                <div className="container-fluid">
-
-                    <h2 className="mb-4 text-white">
-                        Customer Orders
-                    </h2>
-
-                    <div className="table-responsive">
-
-                        {/* ETHE TUSI APNI CURRENT TABLE */}
-
-                    </div>
-
-                </div>
-
-            </div>
             <div className="container-fluid py-5">
 
                 <h2 className="mb-4">
@@ -134,7 +100,7 @@ export default function Orders() {
 
                 <div className="table-responsive">
 
-                   <table className="table table-bordered table-hover bg-white">
+                    <table className="table table-bordered table-hover">
 
                         <thead className="table-dark">
 
