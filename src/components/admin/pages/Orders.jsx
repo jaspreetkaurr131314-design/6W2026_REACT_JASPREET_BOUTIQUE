@@ -104,7 +104,6 @@ export default function Orders() {
         data-aos="fade"
         data-stellar-background-ratio="0.5"
       >
-        
       </div>
             <div className="container-fluid py-5">
 
