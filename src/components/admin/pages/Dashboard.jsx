@@ -60,26 +60,25 @@ export default function Dashboard() {
     data-aos="fade"
     data-stellar-background-ratio="0.5"
   >
-    
+    <div className="container">
+      <div className="row align-items-center justify-content-center">
+        <div
+          className="col-md-7 text-center"
+          data-aos="fade-up"
+          data-aos-delay={400}
+        >
+          <h1 className="text-white">Dashboard</h1>
+          <p>  Welcome to your boutique administration panel</p>
+        </div>
+      </div>
+    </div>
   </div>
 
         <div className="container-fluid py-4">
 
             {/* Heading */}
 
-            <div className="d-flex justify-content-between align-items-center mb-4">
-
-                <div>
-                    <h2 className="mb-1">
-                         Dashboard
-                    </h2>
-
-                    <p className="text-muted mb-0">
-                        Welcome to your boutique administration panel
-                    </p>
-                </div>
-
-            </div>
+           
 
 
             {/* Statistics Cards */}
