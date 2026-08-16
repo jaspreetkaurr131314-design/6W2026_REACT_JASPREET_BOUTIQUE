@@ -87,142 +87,157 @@ export default function Orders() {
     }
 
 
-    return (
-
-        <>
-
             return (
             <>
-                <div className="container-fluid py-5">
+    
+        <div
+            style={{
+                backgroundImage: 'url("/background.jpg")',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                minHeight: "100vh",
+                padding: "60px 30px"
+            }}
+        >
 
-                    <h2 className="mb-4">
-                        Customer Orders
-                    </h2>
+            <div className="container-fluid">
 
-                    <div className="table-responsive">
+                <h2 className="mb-4 text-white">
+                    Customer Orders
+                </h2>
 
-                        <table className="table table-bordered table-hover bg-white">
+                <div className="table-responsive">
 
-                            <thead className="table-dark">
+                    <table className="table table-bordered table-hover bg-white">
+
+                        <thead className="table-dark">
+
+                            <tr>
+                                <th>#</th>
+                                <th>Customer</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Payment</th>
+                                <th>Order Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            {orders.length === 0 ? (
 
                                 <tr>
-                                    <th>#</th>
-                                    <th>Customer</th>
-                                    <th>Phone</th>
-                                    <th>Address</th>
-                                    <th>Payment</th>
-                                    <th>Order Status</th>
-                                    <th>Action</th>
+                                    <td
+                                        colSpan="7"
+                                        className="text-center"
+                                    >
+                                        No Orders Found
+                                    </td>
                                 </tr>
 
-                            </thead>
+                            ) : (
 
-                            <tbody>
+                                orders.map((order, index) => (
 
-                                {orders.length === 0 ? (
+                                    <tr key={order.firebaseId}>
 
-                                    <tr>
-                                        <td
-                                            colSpan="7"
-                                            className="text-center"
-                                        >
-                                            No Orders Found
+                                        <td>
+                                            {index + 1}
                                         </td>
+
+                                        <td>
+                                            {order.name}
+                                        </td>
+
+                                        <td>
+                                            {order.phone}
+                                        </td>
+
+                                        <td>
+                                            {order.houseNo},
+                                            {order.street},
+                                            {order.nearPlace},
+                                            {order.city},
+                                            {order.state} -
+                                            {order.pincode}
+                                        </td>
+
+                                        <td>
+                                            {order.paymentMethod}
+                                        </td>
+
+                                        <td>
+
+                                            <select
+                                                className="form-control"
+                                                value={order.orderStatus}
+                                                onChange={(e) =>
+                                                    updateStatus(
+                                                        order,
+                                                        e.target.value
+                                                    )
+                                                }
+                                            >
+
+                                                <option value="Pending">
+                                                    Pending
+                                                </option>
+
+                                                <option value="Confirmed">
+                                                    Confirmed
+                                                </option>
+
+                                                <option value="Shipped">
+                                                    Shipped
+                                                </option>
+
+                                                <option value="Delivered">
+                                                    Delivered
+                                                </option>
+
+                                                <option value="Cancelled">
+                                                    Cancelled
+                                                </option>
+
+                                            </select>
+
+                                        </td>
+
+                                        <td>
+
+                                            <button
+                                                className="btn btn-danger"
+                                                onClick={() =>
+                                                    deleteOrder(
+                                                        order.firebaseId
+                                                    )
+                                                }
+                                            >
+                                                Delete
+                                            </button>
+
+                                        </td>
+
                                     </tr>
 
-                                ) : (
+                                ))
 
-                                    orders.map((order, index) => (
+                            )}
 
-                                        <tr key={order.firebaseId}>
+                        </tbody>
 
-                                            <td>{index + 1}</td>
-
-                                            <td>{order.name}</td>
-
-                                            <td>{order.phone}</td>
-
-                                            <td>
-                                                {order.houseNo},
-                                                {order.street},
-                                                {order.nearPlace},
-                                                {order.city},
-                                                {order.state} -
-                                                {order.pincode}
-                                            </td>
-
-                                            <td>
-                                                {order.paymentMethod}
-                                            </td>
-
-                                            <td>
-
-                                                <select
-                                                    className="form-control"
-                                                    value={order.orderStatus}
-                                                    onChange={(e) =>
-                                                        updateStatus(
-                                                            order,
-                                                            e.target.value
-                                                        )
-                                                    }
-                                                >
-
-                                                    <option value="Pending">
-                                                        Pending
-                                                    </option>
-
-                                                    <option value="Confirmed">
-                                                        Confirmed
-                                                    </option>
-
-                                                    <option value="Shipped">
-                                                        Shipped
-                                                    </option>
-
-                                                    <option value="Delivered">
-                                                        Delivered
-                                                    </option>
-
-                                                    <option value="Cancelled">
-                                                        Cancelled
-                                                    </option>
-
-                                                </select>
-
-                                            </td>
-
-                                            <td>
-
-                                                <button
-                                                    className="btn btn-danger"
-                                                    onClick={() =>
-                                                        deleteOrder(
-                                                            order.firebaseId
-                                                        )
-                                                    }
-                                                >
-                                                    Delete
-                                                </button>
-
-                                            </td>
-
-                                        </tr>
-
-                                    ))
-
-                                )}
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
+                    </table>
 
                 </div>
-            </>
-            );
 
+            </div>
+
+        </div>
+  
+           
         </>
 
     );
