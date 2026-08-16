@@ -90,7 +90,22 @@ export default function Orders() {
     return (
 
         <>
-
+<div className="site-mobile-menu">
+        <div className="site-mobile-menu-header">
+          <div className="site-mobile-menu-close mt-3">
+            <span className="icon-close2 js-menu-toggle" />
+          </div>
+        </div>
+        <div className="site-mobile-menu-body" />
+      </div>{" "}
+      <div
+        className="site-blocks-cover inner-page-cover overlay"
+        style={{ backgroundImage: 'url("/background.jpg")' }}
+        data-aos="fade"
+        data-stellar-background-ratio="0.5"
+      >
+        
+      </div>
             <div className="container-fluid py-5">
 
                 <h2 className="mb-4">

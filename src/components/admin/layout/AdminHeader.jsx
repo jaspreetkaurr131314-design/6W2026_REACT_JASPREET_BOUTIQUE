@@ -44,7 +44,7 @@ export default function AdminHeader() {
                                 >
 
                                     <strong>
-                                        Fashion-Zone
+                                        Admin panel.
                                     </strong>
 
                                 </Link>
