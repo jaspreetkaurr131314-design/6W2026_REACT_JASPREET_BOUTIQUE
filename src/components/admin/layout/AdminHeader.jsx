@@ -40,7 +40,7 @@ export default function AdminHeader() {
 
                                 <Link
                                     to="/admin"
-                                    className="text-white h2 mb-0"
+                                    className="text-dark h2 mb-0"
                                 >
 
                                     <strong>
@@ -69,7 +69,7 @@ export default function AdminHeader() {
 
                                     <Link
                                         to="#"
-                                        className="site-menu-toggle js-menu-toggle text-black"
+                                        className="site-menu-toggle js-menu-toggle text-white"
                                     >
 
                                         <span className="icon-menu h3" />
