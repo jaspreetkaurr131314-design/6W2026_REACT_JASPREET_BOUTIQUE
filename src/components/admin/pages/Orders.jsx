@@ -87,136 +87,136 @@ export default function Orders() {
     }
 
 
-            return (
-            <>
-                <div className="container-fluid py-5">
+    return (
+        <>
+            <div className="container-fluid py-5">
 
-                    <h2 className="mb-4">
-                        Customer Orders
-                    </h2>
+                <h2 className="mb-4 text-center">
+                    Customer Orders
+                </h2>
 
-                    <div className="table-responsive">
+                <div className="table-responsive">
 
-                        <table className="table table-bordered table-hover bg-white">
+                    <table className="table table-bordered table-hover bg-white">
 
-                            <thead className="table-dark">
+                        <thead className="table-dark">
+
+                            <tr>
+                                <th>#</th>
+                                <th>Customer</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Payment</th>
+                                <th>Order Status</th>
+                                <th>Action</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            {orders.length === 0 ? (
 
                                 <tr>
-                                    <th>#</th>
-                                    <th>Customer</th>
-                                    <th>Phone</th>
-                                    <th>Address</th>
-                                    <th>Payment</th>
-                                    <th>Order Status</th>
-                                    <th>Action</th>
+                                    <td
+                                        colSpan="7"
+                                        className="text-center"
+                                    >
+                                        No Orders Found
+                                    </td>
                                 </tr>
 
-                            </thead>
+                            ) : (
 
-                            <tbody>
+                                orders.map((order, index) => (
 
-                                {orders.length === 0 ? (
+                                    <tr key={order.firebaseId}>
 
-                                    <tr>
-                                        <td
-                                            colSpan="7"
-                                            className="text-center"
-                                        >
-                                            No Orders Found
+                                        <td>{index + 1}</td>
+
+                                        <td>{order.name}</td>
+
+                                        <td>{order.phone}</td>
+
+                                        <td>
+                                            {order.houseNo},
+                                            {order.street},
+                                            {order.nearPlace},
+                                            {order.city},
+                                            {order.state} -
+                                            {order.pincode}
                                         </td>
+
+                                        <td>
+                                            {order.paymentMethod}
+                                        </td>
+
+                                        <td>
+
+                                            <select
+                                                className="form-control"
+                                                value={order.orderStatus}
+                                                onChange={(e) =>
+                                                    updateStatus(
+                                                        order,
+                                                        e.target.value
+                                                    )
+                                                }
+                                            >
+
+                                                <option value="Pending">
+                                                    Pending
+                                                </option>
+
+                                                <option value="Confirmed">
+                                                    Confirmed
+                                                </option>
+
+                                                <option value="Shipped">
+                                                    Shipped
+                                                </option>
+
+                                                <option value="Delivered">
+                                                    Delivered
+                                                </option>
+
+                                                <option value="Cancelled">
+                                                    Cancelled
+                                                </option>
+
+                                            </select>
+
+                                        </td>
+
+                                        <td>
+
+                                            <button
+                                                className="btn btn-danger"
+                                                onClick={() =>
+                                                    deleteOrder(
+                                                        order.firebaseId
+                                                    )
+                                                }
+                                            >
+                                                Delete
+                                            </button>
+
+                                        </td>
+
                                     </tr>
 
-                                ) : (
+                                ))
 
-                                    orders.map((order, index) => (
+                            )}
 
-                                        <tr key={order.firebaseId}>
+                        </tbody>
 
-                                            <td>{index + 1}</td>
-
-                                            <td>{order.name}</td>
-
-                                            <td>{order.phone}</td>
-
-                                            <td>
-                                                {order.houseNo},
-                                                {order.street},
-                                                {order.nearPlace},
-                                                {order.city},
-                                                {order.state} -
-                                                {order.pincode}
-                                            </td>
-
-                                            <td>
-                                                {order.paymentMethod}
-                                            </td>
-
-                                            <td>
-
-                                                <select
-                                                    className="form-control"
-                                                    value={order.orderStatus}
-                                                    onChange={(e) =>
-                                                        updateStatus(
-                                                            order,
-                                                            e.target.value
-                                                        )
-                                                    }
-                                                >
-
-                                                    <option value="Pending">
-                                                        Pending
-                                                    </option>
-
-                                                    <option value="Confirmed">
-                                                        Confirmed
-                                                    </option>
-
-                                                    <option value="Shipped">
-                                                        Shipped
-                                                    </option>
-
-                                                    <option value="Delivered">
-                                                        Delivered
-                                                    </option>
-
-                                                    <option value="Cancelled">
-                                                        Cancelled
-                                                    </option>
-
-                                                </select>
-
-                                            </td>
-
-                                            <td>
-
-                                                <button
-                                                    className="btn btn-danger"
-                                                    onClick={() =>
-                                                        deleteOrder(
-                                                            order.firebaseId
-                                                        )
-                                                    }
-                                                >
-                                                    Delete
-                                                </button>
-
-                                            </td>
-
-                                        </tr>
-
-                                    ))
-
-                                )}
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
+                    </table>
 
                 </div>
-           
+
+            </div>
+
         </>
 
     );
