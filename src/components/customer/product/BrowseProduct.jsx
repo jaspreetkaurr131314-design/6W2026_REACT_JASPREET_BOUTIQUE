@@ -137,15 +137,12 @@ export default function BrowseProduct() {
                             data-aos="fade-up"
                         >
                             <h2 className="mb-5">All Products</h2>
-                            <p>
-                                <h2>Our Products</h2>
 
                                 <p>
                                     Explore our latest collection of stylish and high-quality fashion products.
                                     From traditional suits and casual wear to party dresses and accessories,
                                     Fashion Zone has something for every occasion.
                                 </p>
-                            </p>
                         </div>
                     </div>
                     <div className="row">
