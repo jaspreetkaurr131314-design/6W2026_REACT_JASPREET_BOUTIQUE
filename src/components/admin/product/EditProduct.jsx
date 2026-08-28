@@ -8,15 +8,12 @@ export default function EditProduct() {
 
     const nav = useNavigate()
     const params = useParams()
-
-
     const [productName, setProductName] = useState('');
     const [description, setDescription] = useState('');
     const [status, setStatus] = useState(true);
     const [price, setPrice] = useState(0);
     const [stock, setStock] = useState(0);
     const [discountprice, setDiscountPrice] = useState("");
-    const[brand,setBrand]=useState("");
     async function editProduct(e) {
         e.preventDefault()
         // Validation
@@ -36,7 +33,6 @@ export default function EditProduct() {
                 description: description,
                 price: price,
                 discountPrice: "",
-                brand: "",
                 size: [],
                 color: [],
                 stock: "",
@@ -70,7 +66,6 @@ export default function EditProduct() {
             // setDescription(res.description || "");
             setPrice(res.price || "");
             setDiscountPrice(res.discountPrice || "");
-            // setBrand(res.brand || "");
             setStock(res.stock || "");
             setStatus(res.status);
         }
