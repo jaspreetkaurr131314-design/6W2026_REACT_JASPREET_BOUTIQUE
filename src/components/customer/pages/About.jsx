@@ -41,15 +41,11 @@ export default function About() {
               <div className="col-lg-12">
                 <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
                   <h2 className="mb-5">Our Office team</h2>
-                  <p>
-                    <h2>Our Office Team</h2>
-
                     <p>
                       Our dedicated team works together to provide customers with a smooth and
                       enjoyable shopping experience. From product management to customer support,
                       we focus on quality, creativity, and customer satisfaction.
                     </p>
-                  </p>
                 </div>
               </div>
             </div>
@@ -219,7 +215,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="site-section block-13 bg-light">
+        {/* <div className="site-section block-13 bg-light">
           <div className="container" data-aos="fade-up">
             <div className="row">
               <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
@@ -330,7 +326,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="bg-primary" data-aos="fade">
           <div className="container">
             <div className="row">
