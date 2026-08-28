@@ -70,7 +70,7 @@ export default function EditProduct() {
             // setDescription(res.description || "");
             setPrice(res.price || "");
             setDiscountPrice(res.discountPrice || "");
-            setBrand(res.brand || "");
+            // setBrand(res.brand || "");
             setStock(res.stock || "");
             setStatus(res.status);
         }
