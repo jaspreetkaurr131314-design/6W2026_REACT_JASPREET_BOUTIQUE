@@ -33,7 +33,7 @@ export default function Header() {
                     <div className="row align-items-center">
                         <div className="col-8 col-md-8 col-lg-4">
                             <h1 className="mb-0">
-                                <Link to="" className="text-white h2 mb-0">
+                                <Link to="" className="text-dark h2 mb-0">
                                     <strong>
                                         Fashion-Zone<span className="text-primary"></span>
                                     </strong>
@@ -46,7 +46,7 @@ export default function Header() {
                                 role="navigation"
                             >
                                 <div className="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
-                                    <Link to="#" className="site-menu-toggle js-menu-toggle text-white">
+                                    <Link to="#" className="site-menu-toggle js-menu-toggle text-dark">
                                         <span className="icon-menu h3" />
                                     </Link>
                                 </div>
