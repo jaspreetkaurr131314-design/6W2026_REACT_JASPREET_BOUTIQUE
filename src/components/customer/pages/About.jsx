@@ -42,9 +42,13 @@ export default function About() {
                 <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
                   <h2 className="mb-5">Our Office team</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-                    fugit nam obcaecati fuga itaque deserunt officia, error reiciendis
-                    ab quod?
+                    <h2>Our Office Team</h2>
+
+                    <p>
+                      Our dedicated team works together to provide customers with a smooth and
+                      enjoyable shopping experience. From product management to customer support,
+                      we focus on quality, creativity, and customer satisfaction.
+                    </p>
                   </p>
                 </div>
               </div>
@@ -219,12 +223,12 @@ export default function About() {
           <div className="container" data-aos="fade-up">
             <div className="row">
               <div className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto">
-                <h2 className="mb-5">Love By Our Customers</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-                  fugit nam obcaecati fuga itaque deserunt officia, error reiciendis
-                  ab quod?
-                </p>
+                <h2 className="mb-5"><h2>Loved By Our Customers</h2>
+
+                  <p>
+                    Our customers trust Fashion Zone for quality, style, comfort, and affordable
+                    fashion. Your satisfaction and positive experience are our greatest reward.
+                  </p></h2>
               </div>
             </div>
             <div className="nonloop-block-13 owl-carousel">
