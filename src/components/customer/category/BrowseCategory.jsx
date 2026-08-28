@@ -60,9 +60,7 @@ export default function BrowseCategory() {
                             data-aos-delay={400}
                         >
                             <h1 className="text-white">Categories</h1>
-                            <p>Explore all fashion categories at Fashion Zone, featuring traditional,
-                                casual, party wear, designer suits, and seasonal collections. Find stylish
-                                and comfortable outfits for every occasion and personal style.</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -76,9 +74,9 @@ export default function BrowseCategory() {
                         >
                             <h2 className="mb-5">All categories</h2>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-                                fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab
-                                quod?
+                                Explore all fashion categories at Fashion Zone, featuring traditional,
+                                casual, party wear, designer suits, and seasonal collections. Find stylish
+                                and comfortable outfits for every occasion and personal style.
                             </p>
                         </div>
                     </div>
