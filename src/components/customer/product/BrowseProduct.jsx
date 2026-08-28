@@ -93,7 +93,7 @@ export default function BrowseProduct() {
 
     return (
         <>
- <div className="site-mobile-menu">
+            <div className="site-mobile-menu">
                 <div className="site-mobile-menu-header">
                     <div className="site-mobile-menu-close mt-3">
                         <span className="icon-close2 js-menu-toggle" />
@@ -129,57 +129,61 @@ export default function BrowseProduct() {
 
                 </div>
             </div>
-        <div className="site-section bg-light">
-            <div className="container">
-                <div className="row">
-                    <div
-                        className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto"
-                        data-aos="fade-up"
-                    >
-                        <h2 className="mb-5">All Products</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet,
-                            fugit nam obcaecati fuga itaque deserunt officia, error reiciendis ab
-                            quod?
-                        </p>
+            <div className="site-section bg-light">
+                <div className="container">
+                    <div className="row">
+                        <div
+                            className="site-section-heading text-center mb-5 w-border col-md-6 mx-auto"
+                            data-aos="fade-up"
+                        >
+                            <h2 className="mb-5">All Products</h2>
+                            <p>
+                                <h2>Our Products</h2>
+
+                                <p>
+                                    Explore our latest collection of stylish and high-quality fashion products.
+                                    From traditional suits and casual wear to party dresses and accessories,
+                                    Fashion Zone has something for every occasion.
+                                </p>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="row">
+                        {products.map((product, index) => (
+                            <div
+                                className="col-md-6 col-lg-4 mb-4 mb-lg-0"
+                                data-aos="fade-up"
+                                data-aos-delay={100}
+                            >
+                                <Link to={`/product/${product.id}`}>
+
+                                    <img src={product.image} alt="Image" className="img-fluid" />
+                                </Link>
+                                <div className="p-4 bg-white">
+                                    <span className="d-block text-secondary small text-uppercase">
+                                        {product.name}
+                                    </span>
+                                    <h2 className="h5 text-black mb-3">
+                                        <Link className="text-decoration-line-through" to={`/product/${product.id}`}>{product.price}</Link> &nbsp;
+                                        <Link to="single.html">{product.discountPrice}</Link>
+                                    </h2>
+                                    <h2 className="h5 text-black mb-3">
+                                        <Link to={`/product/${product.id}`}>{product.description}</Link>
+                                    </h2>
+                                    <button
+                                        className="btn btn-primary"
+                                        onClick={() => addToCart(product)}
+                                    >
+                                        Add To Cart
+                                    </button>
+                                </div>
+                            </div>
+                        ))
+
+                        }
                     </div>
                 </div>
-                <div className="row">
-                    {products.map((product, index) => (
-                        <div
-                            className="col-md-6 col-lg-4 mb-4 mb-lg-0"
-                            data-aos="fade-up"
-                            data-aos-delay={100}
-                        >
-                            <Link to={`/product/${product.id}`}>
-
-                                <img src={product.image} alt="Image" className="img-fluid" />
-                            </Link>
-                            <div className="p-4 bg-white">
-                                <span className="d-block text-secondary small text-uppercase">
-                                    {product.name}
-                                </span>
-                                <h2 className="h5 text-black mb-3">
-                                    <Link className="text-decoration-line-through" to={`/product/${product.id}`}>{product.price}</Link> &nbsp;
-                                    <Link to="single.html">{product.discountPrice}</Link>
-                                </h2>
-                                <h2 className="h5 text-black mb-3">
-                                    <Link to={`/product/${product.id}`}>{product.description}</Link>
-                                </h2>
-                                <button
-                                    className="btn btn-primary"
-                                    onClick={() => addToCart(product)}
-                                >
-                                    Add To Cart
-                                </button>
-                            </div>
-                        </div>
-                    ))
-
-                    }
-                </div>
             </div>
-        </div>
         </>
     )
 }
