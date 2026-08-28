@@ -215,62 +215,6 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="site-section">
-          <div className="container">
-            <div className="row">
-           
-            </div>
-            <div className="site-block-retro d-block d-md-flex">
-              <Link
-                to="#"
-                className="col1 unit-9 no-height"
-                data-aos="fade-up"
-                data-aos-delay={100}
-              >
-                <div
-                  className="image"
-                  style={{ backgroundImage: 'url("images/img_2.jpg")' }}
-                />
-                <div className="unit-9-content">
-                  <h2>Baltimore Apartment</h2>
-                  <span>$600/night</span>
-                </div>
-              </Link>
-              <div className="col2 ml-auto">
-                <Link
-                  to="#"
-                  className="col2-row1 unit-9 no-height"
-                  data-aos="fade-up"
-                  data-aos-delay={200}
-                >
-                  <div
-                    className="image"
-                    style={{ backgroundImage: 'url("images/img_3.jpg")' }}
-                  />
-                  <div className="unit-9-content">
-                    <h2>Austin Apartment</h2>
-                    <span>$290/night</span>
-                  </div>
-                </Link>
-                <Link
-                  to="#"
-                  className="col2-row2 unit-9 no-height"
-                  data-aos="fade-up"
-                  data-aos-delay={300}
-                >
-                  <div
-                    className="image"
-                    style={{ backgroundImage: 'url("images/img_1.jpg")' }}
-                  />
-                  <div className="unit-9-content">
-                    <h2>Atlanta Apartment</h2>
-                    <span>$1,290/night</span>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
         <div className="site-section block-13 bg-light">
           <div className="container" data-aos="fade-up">
             <div className="row">
