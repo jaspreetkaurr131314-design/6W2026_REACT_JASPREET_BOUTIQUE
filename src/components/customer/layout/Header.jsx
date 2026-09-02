@@ -28,18 +28,7 @@ export default function Header() {
     })
     return (
         <>
-            {/* <div className="site-navbar mt-4"> */}
-            <div
-                className="site-navbar"
-                style={{
-                    position: "fixed",
-                    top: "0",
-                    left: "0",
-                    width: "100%",
-                    zIndex: "99999",
-                    // backgroundColor: "white"
-                }}
-            >
+            <div className="site-navbar mt-4">
                 <div className="container py-1">
                     <div className="row align-items-center">
                         <div className="col-8 col-md-8 col-lg-4">
@@ -78,7 +67,7 @@ export default function Header() {
                                     <li>
                                         <Link to="/cart">Cart</Link>
                                     </li>
-
+                                    
 
                                     {email ?
                                         <li>
