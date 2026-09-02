@@ -84,11 +84,6 @@ export default function Home() {
                 <p className="mb-5">
                   Welcome to Jaspreet Boutique, your one-stop destination for stylish and fashionable clothing. Explore our latest collection of trendy outfits, quality products, and beautiful designs made for every occasion.
                 </p>
-                <p>
-                  <Link to="#" className="btn btn-primary px-5 py-3">
-                    Shop Now
-                  </Link>
-                </p>
               </div>
             </div>
           </div>
@@ -105,9 +100,9 @@ export default function Home() {
 
               Product Name: Traditional Wear Suit.
 
-              <Link to="#" className="btn btn-primary px-4 py-3">
+              {/* <Link to="#" className="btn btn-primary px-4 py-3">
                 Get Details
-              </Link>
+              </Link> */}
 
             </div>
           </div>
