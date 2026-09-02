@@ -37,7 +37,7 @@ export default function Header() {
                     left: "0",
                     width: "100%",
                     zIndex: "99999",
-                    backgroundColor: "white"
+                    // backgroundColor: "white"
                 }}
             >
                 <div className="container py-1">
