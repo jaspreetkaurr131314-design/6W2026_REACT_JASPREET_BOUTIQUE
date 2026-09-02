@@ -34,8 +34,7 @@ export default function Header() {
                 top:0,
                 zIndex:9999,
                 backgroundcolor:"white"
-            }}
-            //  mt-4">
+            }}>
                 <div className="container py-1">
                     <div className="row align-items-center">
                         <div className="col-8 col-md-8 col-lg-4">
