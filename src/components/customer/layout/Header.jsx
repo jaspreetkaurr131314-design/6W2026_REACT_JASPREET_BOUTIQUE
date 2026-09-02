@@ -28,7 +28,14 @@ export default function Header() {
     })
     return (
         <>
-            <div className="site-navbar mt-4">
+            <div className="site-navbar"
+            style={{
+                position:"sticly",
+                top:0,
+                zIndex:9999,
+                backgroundcolor:"white"
+            }}
+            //  mt-4">
                 <div className="container py-1">
                     <div className="row align-items-center">
                         <div className="col-8 col-md-8 col-lg-4">
